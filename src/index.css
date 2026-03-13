@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hotel-gold: #C5A059;
+  --color-hotel-dark: #1A1A1A;
+  --color-hotel-light: #F5F5F5;
+  --color-hotel-muted: #8e8e93;
+  --color-hotel-maroon: #800000;
+  --color-hotel-green: #2D5A27;
+}
+
+@layer base {
+  body {
+    @apply bg-hotel-light text-hotel-dark antialiased;
+    font-family: 'Noto Sans Ethiopic', sans-serif;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
