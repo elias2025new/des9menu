@@ -111,14 +111,7 @@ const Footer = ({ currentLang = 'en' }) => {
 
                 {/* Info Section */}
                 <div className="pt-6 border-t border-white/10 flex flex-col items-center space-y-3">
-                    <div className="bg-white/10 px-4 py-2 rounded-xl backdrop-blur-sm border border-white/5 w-full flex flex-col items-center space-y-1">
-                        <p className="text-[9px] text-white uppercase font-black tracking-widest text-center">
-                            {t.taxInfo}
-                        </p>
-                        <p className="text-[9px] text-white uppercase font-black tracking-widest text-center opacity-80">
-                            {t.currencyInfo}
-                        </p>
-                    </div>
+
                     <div className="mt-4 opacity-40">
                         <h4 className="text-[10px] font-black text-white uppercase tracking-tighter">
                             DES 9 RESTAURANT & LOUNGE
