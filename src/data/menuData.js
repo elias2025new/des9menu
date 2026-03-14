@@ -74,7 +74,8 @@ export const menuData = {
                 { name: "Abzi", image: "/images/des9-logo.jpg", description: "Traditional dish with spiced butter, cottage cheese, aged cheese, and niger seed" },
                 { name: "Chukame be Tibs", price: "900.00", image: "/images/chukame_be_tibs.jpg", description: "Traditional dish served with fried meat" },
                 { name: "Chukame be Gomen", price: "900.00", image: "/images/chukame_be_gomen.jpg", description: "Traditional dish served with collard greens" },
-                { name: "Bursame", price: "900.00", image: "/images/bursame.jpg", description: "Traditional Gurage meat and butter dish" }
+                { name: "Bursame", price: "900.00", image: "/images/bursame.jpg", description: "Traditional Gurage meat and butter dish" },
+                { name: "Lasagna", price: "300.00", image: "/images/des9-logo.jpg", description: "Classic layered pasta with meat sauce and cheese" }
             ]
         },
         {
@@ -107,6 +108,15 @@ export const menuData = {
                 { name: "Small Water", price: "30.00", image: "/images/des9-logo.jpg", description: "" },
                 { name: "Water 1L", price: "35.00", image: "/images/des9-logo.jpg", description: "" },
                 { name: "Water 2L", price: "60.00", image: "/images/des9-logo.jpg", description: "" }
+            ]
+        },
+        {
+            id: "hot-drinks",
+            title: "Hot Drinks",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "Tea", price: "30.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "Coffee", price: "40.00", image: "/images/des9-logo.jpg", description: "" }
             ]
         },
         {
@@ -236,7 +246,8 @@ export const menuData = {
                 { name: "አብዚ", image: "/images/des9-logo.jpg", description: "(በድርጥ, በቂቤ, በአይብ, በመጣጣ, በኑግ)" },
                 { name: "ጩካሜ በጥብስ", price: "900.00", image: "/images/chukame_be_tibs.jpg", description: "" },
                 { name: "ጩካሜ በጎመን", price: "900.00", image: "/images/chukame_be_gomen.jpg", description: "" },
-                { name: "ቡርሳሜ", price: "900.00", image: "/images/bursame.jpg", description: "" }
+                { name: "ቡርሳሜ", price: "900.00", image: "/images/bursame.jpg", description: "" },
+                { name: "ላዛኛ", price: "300.00", image: "/images/des9-logo.jpg", description: "" }
             ]
         },
         {
@@ -269,6 +280,15 @@ export const menuData = {
                 { name: "ትንሽ ውኃ", price: "30.00", image: "/images/des9-logo.jpg", description: "" },
                 { name: "1 ሊትር ዉሀ", price: "35.00", image: "/images/des9-logo.jpg", description: "" },
                 { name: "2 ሊትር ዉሀ", price: "60.00", image: "/images/des9-logo.jpg", description: "" }
+            ]
+        },
+        {
+            id: "hot-drinks",
+            title: "ትኩስ መጠጦች",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "ሻይ", price: "30.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ቡና", price: "40.00", image: "/images/des9-logo.jpg", description: "" }
             ]
         },
         {
