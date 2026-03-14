@@ -45,7 +45,7 @@ export const menuData = {
                 { name: "Ye'Tsom Mulu Agelgil", price: "450.00", image: "/images/photo_5884088003225914766_x.jpg", description: "Full fasting meal wrapped in injera" },
                 { name: "Ye'Tsom Gimash Agelgil", price: "300.00", image: "/images/photo_5884088003225914766_x.jpg", description: "Half fasting meal wrapped in injera" },
                 { name: "Timatim Lebleb be Shiro", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "Warmed tomatoes served with Shiro" },
-                { name: "Timatim Lebleb be Dirkosh", price: "300.00", image: "/images/des9-logo.jpg", description: "Warmed tomatoes with dried injera" },
+                { name: "Timatim Lebleb be Dirkosh", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "Warmed tomatoes with dried injera" },
                 { name: "Shirshim", price: "300.00", image: "/images/photo_5884088003225914771_y.jpg", description: "Traditional grain stew" },
                 { name: "Dekeko", price: "300.00", image: "/images/des9-logo.jpg", description: "Spiced split pea stew" },
                 { name: "Atkilt Firfir", price: "300.00", image: "/images/photo_5884088003225914773_x.jpg", description: "Vegetable stew mixed with injera" }
@@ -68,7 +68,7 @@ export const menuData = {
                 { name: "Kitfo Firfir", price: "400.00", image: "/images/kitfo_firfir.jpg", description: "Minced beef mixed with injera" },
                 { name: "Afagn", price: "500.00", image: "/images/afagn.jpg", description: "Smothered/steamed spicy meat" },
                 { name: "Bozena Shiro", price: "300.00", image: "/images/bozena_shiro.jpg", description: "Chickpea stew cooked with meat" },
-                { name: "Shiro Tikilil", price: "500.00", image: "/images/des9-logo.jpg", description: "Shiro and meat wrapped in injera roll" },
+                { name: "Shiro Tikilil", price: "500.00", image: "/images/photo_5884088003225914759_x.jpg", description: "Shiro and meat wrapped in injera roll" },
                 { name: "Tripa", price: "400.00", image: "/images/tripa.jpg", description: "Tripe stew" },
                 { name: "Chororsa", price: "900.00", image: "/images/chororsa.jpg", description: "Traditional Gurage meat dish" },
                 { name: "Abzi", image: "/images/des9-logo.jpg", description: "Traditional dish with spiced butter, cottage cheese, aged cheese, and niger seed" },
@@ -153,7 +153,7 @@ export const menuData = {
             items: [
                 { name: "Absolut Vodka", image: "/images/photo_5884088003225914788_x.jpg", description: "" },
                 { name: "Smirnoff Vodka", image: "/images/photo_5884088003225914793_x.jpg", description: "" },
-                { name: "Grey Goose Vodka", image: "/images/des9-logo.jpg", description: "" },
+                { name: "Grey Goose Vodka", image: "/images/photo_5884088003225914792_y (1).jpg", description: "" },
                 { name: "Moët & Chandon", image: "/images/photo_5884088003225914791_x.jpg", description: "Champagne" },
                 { name: "Veuve Clicquot", image: "/images/photo_5884088003225914790_x.jpg", description: "Champagne" },
                 { name: "Martini Asti", image: "/images/photo_5884088003225914794_x.jpg", description: "Champagne" }
@@ -217,7 +217,7 @@ export const menuData = {
                 { name: "የፆም ሙሉ አገልግል", price: "450.00", image: "/images/photo_5884088003225914766_x.jpg", description: "" },
                 { name: "የፆም ግማሽ አገልግል", price: "300.00", image: "/images/photo_5884088003225914766_x.jpg", description: "" },
                 { name: "ቲማቲም ለብለብ በሽሮ", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "" },
-                { name: "ቲማቲም ለብለብ በድርቆሽ", price: "300.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ቲማቲም ለብለብ በድርቆሽ", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "" },
                 { name: "ሽርሽም", price: "300.00", image: "/images/photo_5884088003225914771_y.jpg", description: "" },
                 { name: "ደቀቆ", price: "300.00", image: "/images/des9-logo.jpg", description: "" },
                 { name: "አትክልት ፍርፍር", price: "300.00", image: "/images/photo_5884088003225914773_x.jpg", description: "" }
@@ -240,7 +240,7 @@ export const menuData = {
                 { name: "ክትፎ ፍርፍር", price: "400.00", image: "/images/kitfo_firfir.jpg", description: "" },
                 { name: "አፋኝ", price: "500.00", image: "/images/afagn.jpg", description: "" },
                 { name: "ቦዘና ሽሮ", price: "300.00", image: "/images/bozena_shiro.jpg", description: "" },
-                { name: "ሽሮ ጥቅልል", price: "500.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ሽሮ ጥቅልል", price: "500.00", image: "/images/photo_5884088003225914759_x.jpg", description: "" },
                 { name: "ትሪፓ", price: "400.00", image: "/images/tripa.jpg", description: "" },
                 { name: "ጮሮርሳ", price: "900.00", image: "/images/chororsa.jpg", description: "" },
                 { name: "አብዚ", image: "/images/des9-logo.jpg", description: "(በድርጥ, በቂቤ, በአይብ, በመጣጣ, በኑግ)" },
@@ -325,7 +325,7 @@ export const menuData = {
             items: [
                 { name: "አብሶሉት ቮድካ", image: "/images/photo_5884088003225914788_x.jpg", description: "" },
                 { name: "ስሚርኖፍ ቮድካ", image: "/images/photo_5884088003225914793_x.jpg", description: "" },
-                { name: "ግሬይ ጉስ ቮድካ", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ግሬይ ጉስ ቮድካ", image: "/images/photo_5884088003225914792_y (1).jpg", description: "" },
                 { name: "ሞ ኮንዶ", image: "/images/photo_5884088003225914791_x.jpg", description: "ሻምፓኝ" },
                 { name: "ቩቭ ክሊኮ", image: "/images/photo_5884088003225914790_x.jpg", description: "ሻምፓኝ" },
                 { name: "ማርቲኒ አስቲ", image: "/images/photo_5884088003225914794_x.jpg", description: "ሻምፓኝ" }
