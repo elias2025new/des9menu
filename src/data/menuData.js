@@ -12,7 +12,7 @@ export const menuData = {
                 { name: "Timatim Sils", price: "200.00", image: "/images/ቲማቲም ስልስ.jpg", description: "Tomato stew" },
                 { name: "Besso Chibto", price: "150.00", image: "/images/Beso chiobto.jpg", description: "Seasoned roasted barley dough" },
                 { name: "Besso Juice", price: "150.00", image: "/images/BESO Juice.jpg", description: "Roasted barley drink" },
-                { name: "Telba", price: "150.00", image: "/images/des9-logo.jpg", description: "Flaxseed drink" },
+                { name: "Telba", price: "150.00", image: "/images/Capture.PNG", description: "Flaxseed drink" },
                 { name: "Ergo", price: "150.00", image: "/images/ERGO.jpg", description: "Ethiopian Yogurt" },
                 { name: "Shiro Fitfit", price: "300.00", image: "/images/shiro fitfit.jpg", description: "Shredded injera in chickpea stew" }
             ]
@@ -104,19 +104,19 @@ export const menuData = {
             categoryImage: "/images/sofyt drink.jpg",
             items: [
                 { name: "Coca-Cola / Pepsi", price: "60.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Ambo Mineral Water", price: "60.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Small Water", price: "30.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Water 1L", price: "35.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Water 2L", price: "60.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "Ambo Mineral Water", price: "60.00", image: "/images/photo_5884088003225914776_x.jpg", description: "" },
+                { name: "Small Water", price: "30.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
+                { name: "Water 1L", price: "35.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
+                { name: "Water 2L", price: "60.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" }
             ]
         },
         {
             id: "hot-drinks",
             title: "Hot Drinks",
-            categoryImage: "/images/des9-logo.jpg",
+            categoryImage: "/images/tea and coffe.webp",
             items: [
-                { name: "Tea", price: "30.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Coffee", price: "40.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "Tea", price: "30.00", image: "/images/Tea.jpg", description: "" },
+                { name: "Coffee", price: "40.00", image: "/images/coffee.jpg", description: "" }
             ]
         },
         {
@@ -124,13 +124,13 @@ export const menuData = {
             title: "Beer",
             categoryImage: "/images/header_beer_bottled.png",
             items: [
-                { name: "St. George Beer", price: "100.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Habesha Beer", price: "100.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Dashen Beer", price: "100.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Harar Beer", price: "100.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Bedele Beer", price: "115.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Heineken Beer", price: "115.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Arada Beer", price: "115.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "St. George Beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Habesha Beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Dashen Beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Harar Beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Bedele Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Heineken Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Arada Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" }
             ]
         },
         {
@@ -138,12 +138,12 @@ export const menuData = {
             title: "Wine",
             categoryImage: "/images/header_red_wine.png",
             items: [
-                { name: "Axumite Red Wine", price: "900.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Axumite Sweet Wine", price: "900.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Rift Valley Wine", price: "600.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Gouder Wine", price: "600.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Awash Tekeshino", price: "600.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Guder Small", price: "400.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "Axumite Red Wine", price: "900.00", image: "/images/photo_5884088003225914786_x.jpg", description: "" },
+                { name: "Axumite Sweet Wine", price: "900.00", image: "/images/photo_5884088003225914786_x.jpg", description: "" },
+                { name: "Rift Valley Wine", price: "600.00", image: "/images/photo_5884088003225914787_x.jpg", description: "" },
+                { name: "Gouder Wine", price: "600.00", image: "/images/photo_5884088003225914787_x.jpg", description: "" },
+                { name: "Awash Tekeshino", price: "600.00", image: "/images/photo_5884088003225914786_x.jpg", description: "" },
+                { name: "Guder Small", price: "400.00", image: "/images/photo_5884088003225914787_x.jpg", description: "" }
             ]
         },
         {
@@ -151,12 +151,12 @@ export const menuData = {
             title: "Vodka & Champagne",
             categoryImage: "/images/header_vodka.png",
             items: [
-                { name: "Absolut Vodka", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Smirnoff Vodka", image: "/images/des9-logo.jpg", description: "" },
+                { name: "Absolut Vodka", image: "/images/photo_5884088003225914788_x.jpg", description: "" },
+                { name: "Smirnoff Vodka", image: "/images/photo_5884088003225914793_x.jpg", description: "" },
                 { name: "Grey Goose Vodka", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Moët & Chandon", image: "/images/des9-logo.jpg", description: "Champagne" },
-                { name: "Veuve Clicquot", image: "/images/des9-logo.jpg", description: "Champagne" },
-                { name: "Martini Asti", image: "/images/des9-logo.jpg", description: "Champagne" }
+                { name: "Moët & Chandon", image: "/images/photo_5884088003225914791_x.jpg", description: "Champagne" },
+                { name: "Veuve Clicquot", image: "/images/photo_5884088003225914790_x.jpg", description: "Champagne" },
+                { name: "Martini Asti", image: "/images/photo_5884088003225914794_x.jpg", description: "Champagne" }
             ]
         },
         {
@@ -184,7 +184,7 @@ export const menuData = {
                 { name: "ቲማቲም ስልስ", price: "200.00", image: "/images/ቲማቲም ስልስ.jpg", description: "" },
                 { name: "በሶ ጭብጦ", price: "150.00", image: "/images/Beso chiobto.jpg", description: "" },
                 { name: "በሶ ጁስ", price: "150.00", image: "/images/BESO Juice.jpg", description: "" },
-                { name: "ተልባ", price: "150.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ተልባ", price: "150.00", image: "/images/Capture.PNG", description: "" },
                 { name: "እርጎ", price: "150.00", image: "/images/ERGO.jpg", description: "" },
                 { name: "ሽሮ ፍትፍት", price: "300.00", image: "/images/shiro fitfit.jpg", description: "" }
             ]
@@ -276,19 +276,19 @@ export const menuData = {
             categoryImage: "/images/sofyt drink.jpg",
             items: [
                 { name: "ኮካ ኮላ/ፔፕሲ", price: "60.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "አምቦ ጠበል", price: "60.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ትንሽ ውኃ", price: "30.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "1 ሊትር ዉሀ", price: "35.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "2 ሊትር ዉሀ", price: "60.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "አምቦ ጠበል", price: "60.00", image: "/images/photo_5884088003225914776_x.jpg", description: "" },
+                { name: "ትንሽ ውኃ", price: "30.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
+                { name: "1 ሊትር ዉሀ", price: "35.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
+                { name: "2 ሊትር ዉሀ", price: "60.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" }
             ]
         },
         {
             id: "hot-drinks",
             title: "ትኩስ መጠጦች",
-            categoryImage: "/images/des9-logo.jpg",
+            categoryImage: "/images/tea and coffe.webp",
             items: [
-                { name: "ሻይ", price: "30.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ቡና", price: "40.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "ሻይ", price: "30.00", image: "/images/Tea.jpg", description: "" },
+                { name: "ቡና", price: "40.00", image: "/images/coffee.jpg", description: "" }
             ]
         },
         {
@@ -296,13 +296,13 @@ export const menuData = {
             title: "ቢራ",
             categoryImage: "/images/header_beer_bottled.png",
             items: [
-                { name: "ቅዱስ ጊዮርጊስ ቢራ", price: "100.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ሐበሻ ቢራ", price: "100.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ዳሸን ቢራ", price: "100.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ሐረር ቢራ", price: "100.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "በደሌ ቢራ", price: "115.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ሄኒከን ቢራ", price: "115.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "አራዳ ቢራ", price: "115.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "ቅዱስ ጊዮርጊስ ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ሐበሻ ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ዳሸን ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ሐረር ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "በደሌ ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ሄኒከን ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "አራዳ ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" }
             ]
         },
         {
@@ -310,12 +310,12 @@ export const menuData = {
             title: "ወይን",
             categoryImage: "/images/header_red_wine.png",
             items: [
-                { name: "አክሱማይት ቀይ ወይን", price: "900.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "አክሱማይት ጣፋጭ ወይን", price: "900.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ሪፍት ቫሊ ወይን", price: "600.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ጉደር ወይን", price: "600.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "አዋሽ ተከሺኖ", price: "600.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ጉደር ትንሽ", price: "400.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "አክሱማይት ቀይ ወይን", price: "900.00", image: "/images/photo_5884088003225914786_x.jpg", description: "" },
+                { name: "አክሱማይት ጣፋጭ ወይን", price: "900.00", image: "/images/photo_5884088003225914786_x.jpg", description: "" },
+                { name: "ሪፍት ቫሊ ወይን", price: "600.00", image: "/images/photo_5884088003225914787_x.jpg", description: "" },
+                { name: "ጉደር ወይን", price: "600.00", image: "/images/photo_5884088003225914787_x.jpg", description: "" },
+                { name: "አዋሽ ተከሺኖ", price: "600.00", image: "/images/photo_5884088003225914786_x.jpg", description: "" },
+                { name: "ጉደር ትንሽ", price: "400.00", image: "/images/photo_5884088003225914787_x.jpg", description: "" }
             ]
         },
         {
@@ -323,12 +323,12 @@ export const menuData = {
             title: "ቮድካ እና ሻምፓኝ",
             categoryImage: "/images/header_vodka.png",
             items: [
-                { name: "አብሶሉት ቮድካ", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ስሚርኖፍ ቮድካ", image: "/images/des9-logo.jpg", description: "" },
+                { name: "አብሶሉት ቮድካ", image: "/images/photo_5884088003225914788_x.jpg", description: "" },
+                { name: "ስሚርኖፍ ቮድካ", image: "/images/photo_5884088003225914793_x.jpg", description: "" },
                 { name: "ግሬይ ጉስ ቮድካ", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ሞ ኮንዶ", image: "/images/des9-logo.jpg", description: "ሻምፓኝ" },
-                { name: "ቩቭ ክሊኮ", image: "/images/des9-logo.jpg", description: "ሻምፓኝ" },
-                { name: "ማርቲኒ አስቲ", image: "/images/des9-logo.jpg", description: "ሻምፓኝ" }
+                { name: "ሞ ኮንዶ", image: "/images/photo_5884088003225914791_x.jpg", description: "ሻምፓኝ" },
+                { name: "ቩቭ ክሊኮ", image: "/images/photo_5884088003225914790_x.jpg", description: "ሻምፓኝ" },
+                { name: "ማርቲኒ አስቲ", image: "/images/photo_5884088003225914794_x.jpg", description: "ሻምፓኝ" }
             ]
         },
         {
