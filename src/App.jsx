@@ -92,7 +92,7 @@ function App() {
                 </p>
               )}
 
-              <div className="grid grid-cols-2 gap-2.5 text-left">
+              <div className="grid grid-cols-1 gap-2.5 text-left">
                 {category.items.map((item, itemIndex) => (
                   <FoodCard
                     key={`${category.id}-${itemIndex}`}
