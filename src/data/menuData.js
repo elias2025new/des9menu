@@ -164,10 +164,10 @@ export const menuData = {
             title: "Whisky",
             categoryImage: "/images/header_whisky.png",
             items: [
-                { name: "Johnnie Walker Red Label", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Johnnie Walker Black Label", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Jack Daniel's", image: "/images/des9-logo.jpg", description: "" },
-                { name: "Chivas Regal", image: "/images/des9-logo.jpg", description: "" }
+                { name: "Johnnie Walker Red Label", image: "/images/photo_5884088003225914804_x.jpg", description: "" },
+                { name: "Johnnie Walker Black Label", image: "/images/photo_5884088003225914805_x.jpg", description: "" },
+                { name: "Jack Daniel's", image: "/images/photo_5884088003225914806_x.jpg", description: "" },
+                { name: "Chivas Regal", image: "/images/photo_5884088003225914808_x.jpg", description: "" }
             ]
         }
     ],
@@ -336,10 +336,10 @@ export const menuData = {
             title: "ዊስኪ",
             categoryImage: "/images/header_whisky.png",
             items: [
-                { name: "ጆኒ ዎከር ሬድ ሌብል", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ጆኒ ዎከር ብላክ ሌብል", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ጃክ ዳንኤል", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ቺቫስ ሪጋል", image: "/images/des9-logo.jpg", description: "" }
+                { name: "ጆኒ ዎከር ሬድ ሌብል", image: "/images/photo_5884088003225914804_x.jpg", description: "" },
+                { name: "ጆኒ ዎከር ብላክ ሌብል", image: "/images/photo_5884088003225914805_x.jpg", description: "" },
+                { name: "ጃክ ዳንኤል", image: "/images/photo_5884088003225914806_x.jpg", description: "" },
+                { name: "ቺቫስ ሪጋል", image: "/images/photo_5884088003225914808_x.jpg", description: "" }
             ]
         }
     ]
