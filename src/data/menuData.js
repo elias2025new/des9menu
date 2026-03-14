@@ -75,7 +75,7 @@ export const menuData = {
                 { name: "Chukame be Tibs", price: "900.00", image: "/images/chukame_be_tibs.jpg", description: "Traditional dish served with fried meat" },
                 { name: "Chukame be Gomen", price: "900.00", image: "/images/chukame_be_gomen.jpg", description: "Traditional dish served with collard greens" },
                 { name: "Bursame", price: "900.00", image: "/images/bursame.jpg", description: "Traditional Gurage meat and butter dish" },
-                { name: "Lasagna", price: "300.00", image: "/images/des9-logo.jpg", description: "Classic layered pasta with meat sauce and cheese" }
+                { name: "Lasagna", price: "300.00", image: "/images/photo_5884088003225914815_x.jpg", description: "Classic layered pasta with meat sauce and cheese" }
             ]
         },
         {
@@ -103,7 +103,7 @@ export const menuData = {
             title: "Soft Drinks",
             categoryImage: "/images/sofyt drink.jpg",
             items: [
-                { name: "Coca-Cola / Pepsi", price: "60.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "Coca-Cola / Pepsi", price: "60.00", image: "/images/photo_5884088003225914775_y (1).jpg", description: "" },
                 { name: "Ambo Mineral Water", price: "60.00", image: "/images/photo_5884088003225914776_x.jpg", description: "" },
                 { name: "Small Water", price: "30.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
                 { name: "Water 1L", price: "35.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
@@ -247,7 +247,7 @@ export const menuData = {
                 { name: "ጩካሜ በጥብስ", price: "900.00", image: "/images/chukame_be_tibs.jpg", description: "" },
                 { name: "ጩካሜ በጎመን", price: "900.00", image: "/images/chukame_be_gomen.jpg", description: "" },
                 { name: "ቡርሳሜ", price: "900.00", image: "/images/bursame.jpg", description: "" },
-                { name: "ላዛኛ", price: "300.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "ላዛኛ", price: "300.00", image: "/images/photo_5884088003225914815_x.jpg", description: "" }
             ]
         },
         {
@@ -275,7 +275,7 @@ export const menuData = {
             title: "ሶፍት ድሪንክ",
             categoryImage: "/images/sofyt drink.jpg",
             items: [
-                { name: "ኮካ ኮላ/ፔፕሲ", price: "60.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ኮካ ኮላ/ፔፕሲ", price: "60.00", image: "/images/photo_5884088003225914775_y (1).jpg", description: "" },
                 { name: "አምቦ ጠበል", price: "60.00", image: "/images/photo_5884088003225914776_x.jpg", description: "" },
                 { name: "ትንሽ ውኃ", price: "30.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
                 { name: "1 ሊትር ዉሀ", price: "35.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
