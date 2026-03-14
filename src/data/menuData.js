@@ -29,7 +29,7 @@ export const menuData = {
                 { name: "Quanta / Tibs Firfir", price: "300.00", image: "/images/tibs_firfir.jpg", description: "Dried or fried beef stew mixed with injera" },
                 { name: "Dulet", price: "400.00", image: "/images/dulet.jpg", description: "Spicy minced tripe, liver, and lean beef" },
                 { name: "Special Chechebsa", price: "350.00", image: "/images/special_chechebsa.jpg", description: "Special shredded flatbread with spiced butter" },
-                { name: "Milas Senber", price: "300.00", image: "/images/des9-logo.jpg", description: "Beef tongue and tripe stew" }
+                { name: "Milas Senber", price: "300.00", image: "/images/photo_5884088003225914753_y.jpg", description: "Beef tongue and tripe stew" }
             ]
         },
         {
@@ -37,18 +37,18 @@ export const menuData = {
             title: "Fasting Lunch & Dinner",
             categoryImage: "/images/cat_fasting_lunch_dinner.png",
             items: [
-                { name: "Shiro", price: "170.00", image: "/images/des9-logo.jpg", description: "Chickpea stew" },
-                { name: "Tegabino", price: "220.00", image: "/images/des9-logo.jpg", description: "Thick chickpea stew served in a clay pot" },
-                { name: "Beyaynetu", price: "250.00", image: "/images/des9-logo.jpg", description: "Mixed vegan platter" },
+                { name: "Shiro", price: "170.00", image: "/images/photo_5884088003225914759_x.jpg", description: "Chickpea stew" },
+                { name: "Tegabino", price: "220.00", image: "/images/photo_5884088003225914760_x.jpg", description: "Thick chickpea stew served in a clay pot" },
+                { name: "Beyaynetu", price: "250.00", image: "/images/photo_5884088003225914764_y.jpg", description: "Mixed vegan platter" },
                 { name: "Combo (Ethio-Italy)", price: "250.00", image: "/images/des9-logo.jpg", description: "Ethiopian & Italian mixed dish" },
                 { name: "Combo (Ethio-China)", price: "250.00", image: "/images/des9-logo.jpg", description: "Ethiopian & Chinese mixed dish" },
-                { name: "Ye'Tsom Mulu Agelgil", price: "450.00", image: "/images/des9-logo.jpg", description: "Full fasting meal wrapped in injera" },
-                { name: "Ye'Tsom Gimash Agelgil", price: "300.00", image: "/images/des9-logo.jpg", description: "Half fasting meal wrapped in injera" },
-                { name: "Timatim Lebleb be Shiro", price: "300.00", image: "/images/des9-logo.jpg", description: "Warmed tomatoes served with Shiro" },
+                { name: "Ye'Tsom Mulu Agelgil", price: "450.00", image: "/images/photo_5884088003225914766_x.jpg", description: "Full fasting meal wrapped in injera" },
+                { name: "Ye'Tsom Gimash Agelgil", price: "300.00", image: "/images/photo_5884088003225914766_x.jpg", description: "Half fasting meal wrapped in injera" },
+                { name: "Timatim Lebleb be Shiro", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "Warmed tomatoes served with Shiro" },
                 { name: "Timatim Lebleb be Dirkosh", price: "300.00", image: "/images/des9-logo.jpg", description: "Warmed tomatoes with dried injera" },
-                { name: "Shirshim", price: "300.00", image: "/images/des9-logo.jpg", description: "Traditional grain stew" },
+                { name: "Shirshim", price: "300.00", image: "/images/photo_5884088003225914771_y.jpg", description: "Traditional grain stew" },
                 { name: "Dekeko", price: "300.00", image: "/images/des9-logo.jpg", description: "Spiced split pea stew" },
-                { name: "Atkilt Firfir", price: "300.00", image: "/images/des9-logo.jpg", description: "Vegetable stew mixed with injera" }
+                { name: "Atkilt Firfir", price: "300.00", image: "/images/photo_5884088003225914773_x.jpg", description: "Vegetable stew mixed with injera" }
             ]
         },
         {
@@ -201,7 +201,7 @@ export const menuData = {
                 { name: "ቆንጣ / ጥብስ ፍርፍር", price: "300.00", image: "/images/tibs_firfir.jpg", description: "" },
                 { name: "ዱለት", price: "400.00", image: "/images/dulet.jpg", description: "" },
                 { name: "ስፔሻል ጨጨብሳ", price: "350.00", image: "/images/special_chechebsa.jpg", description: "" },
-                { name: "ምላስ ሰንበር", price: "300.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "ምላስ ሰንበር", price: "300.00", image: "/images/photo_5884088003225914753_y.jpg", description: "" }
             ]
         },
         {
@@ -209,18 +209,18 @@ export const menuData = {
             title: "የፆም ምሳና እራት",
             categoryImage: "/images/cat_fasting_lunch_dinner.png",
             items: [
-                { name: "ሽሮ", price: "170.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ተጋቢኖ", price: "220.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "በያይነቱ", price: "250.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ሽሮ", price: "170.00", image: "/images/photo_5884088003225914759_x.jpg", description: "" },
+                { name: "ተጋቢኖ", price: "220.00", image: "/images/photo_5884088003225914760_x.jpg", description: "" },
+                { name: "በያይነቱ", price: "250.00", image: "/images/photo_5884088003225914764_y.jpg", description: "" },
                 { name: "ኮምቦ (ኢትዮ ኢታሊ)", price: "250.00", image: "/images/des9-logo.jpg", description: "" },
                 { name: "ኮምቦ (ኢትዮ ቻይና)", price: "250.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "የፆም ሙሉ አገልግል", price: "450.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "የፆም ግማሽ አገልግል", price: "300.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ቲማቲም ለብለብ በሽሮ", price: "300.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "የፆም ሙሉ አገልግል", price: "450.00", image: "/images/photo_5884088003225914766_x.jpg", description: "" },
+                { name: "የፆም ግማሽ አገልግል", price: "300.00", image: "/images/photo_5884088003225914766_x.jpg", description: "" },
+                { name: "ቲማቲም ለብለብ በሽሮ", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "" },
                 { name: "ቲማቲም ለብለብ በድርቆሽ", price: "300.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ሽርሽም", price: "300.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ሽርሽም", price: "300.00", image: "/images/photo_5884088003225914771_y.jpg", description: "" },
                 { name: "ደቀቆ", price: "300.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "አትክልት ፍርፍር", price: "300.00", image: "/images/des9-logo.jpg", description: "" }
+                { name: "አትክልት ፍርፍር", price: "300.00", image: "/images/photo_5884088003225914773_x.jpg", description: "" }
             ]
         },
         {
