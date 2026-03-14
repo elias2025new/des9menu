@@ -103,7 +103,7 @@ const CategoryNav = ({ categories, activeCategory, onCategoryClick, currentLang,
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 max-w-[430px] mx-auto shadow-[0_2px_16px_-4px_rgba(0,0,0,0.08)]">
-            <div className="px-5 pt-3.5 pb-3 flex justify-between items-center relative z-20" style={{background: 'linear-gradient(135deg, #6B4F1E 0%, #A07830 60%, #C5A059 100%)'}}>
+            <div className="px-5 pt-3.5 pb-3 flex justify-between items-center relative z-20 bg-hotel-maroon">
                 <div className="flex flex-col">
                     <h1 className="text-[13px] font-black text-white tracking-tight leading-tight flex items-center gap-1">
                         {currentLang === 'am' ? (
