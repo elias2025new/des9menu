@@ -12,7 +12,7 @@ export const menuData = {
                 { name: "Timatim Sils", price: "200.00", image: "/images/ቲማቲም ስልስ.jpg", description: "Tomato stew" },
                 { name: "Besso Chibto", price: "150.00", image: "/images/Beso chiobto.jpg", description: "Seasoned roasted barley dough" },
                 { name: "Besso Juice", price: "150.00", image: "/images/BESO Juice.jpg", description: "Roasted barley drink" },
-                { name: "Telba", price: "150.00", image: "/images/Capture.PNG", description: "Flaxseed drink" },
+                { name: "Telba Juice", price: "150.00", image: "/images/Capture.PNG", description: "Flaxseed drink" },
                 { name: "Ergo", price: "150.00", image: "/images/ERGO.jpg", description: "Ethiopian Yogurt" },
                 { name: "Shiro Fitfit", price: "300.00", image: "/images/shiro fitfit.jpg", description: "Shredded injera in chickpea stew" }
             ]
@@ -184,7 +184,7 @@ export const menuData = {
                 { name: "ቲማቲም ስልስ", price: "200.00", image: "/images/ቲማቲም ስልስ.jpg", description: "" },
                 { name: "በሶ ጭብጦ", price: "150.00", image: "/images/Beso chiobto.jpg", description: "" },
                 { name: "በሶ ጁስ", price: "150.00", image: "/images/BESO Juice.jpg", description: "" },
-                { name: "ተልባ", price: "150.00", image: "/images/Capture.PNG", description: "" },
+                { name: "ተልባ ጁስ", price: "150.00", image: "/images/Capture.PNG", description: "" },
                 { name: "እርጎ", price: "150.00", image: "/images/ERGO.jpg", description: "" },
                 { name: "ሽሮ ፍትፍት", price: "300.00", image: "/images/shiro fitfit.jpg", description: "" }
             ]

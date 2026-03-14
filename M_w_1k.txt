@@ -9,7 +9,7 @@ DES9 Restaurant & Lounge – Menu
 ቲማቲም ስልስ 200
 በሶ ጭብጦ 
 በሶ ጁስ
-ተልባ 150
+ተልባ ጁስ 150
 እርጎ
 ሽሮ ፍትፍት 300
 
@@ -103,7 +103,7 @@ Besso Chibto (Seasoned roasted barley dough) – [No price listed]
 
 Besso Juice (Roasted barley drink) – [No price listed]
 
-Telba (Flaxseed drink) – [No price listed]
+Telba Juice (Flaxseed drink) – [No price listed]
 
 Ergo (Ethiopian Yogurt) – [No price listed]
 
