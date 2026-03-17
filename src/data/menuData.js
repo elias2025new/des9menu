@@ -89,6 +89,77 @@ export const menuData = {
             ]
         },
         {
+            id: "fish-dishes",
+            title: "Fish Dishes",
+            categoryImage: "/images/photo_5884088003225914871_y.jpg",
+            items: [
+                { name: "Asa Lebleb", price: "400.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ለብለብ" },
+                { name: "Asa Cotelette", price: "400.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ኮተሌት" },
+                { name: "Asa Gulash", price: "400.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ጉላሽ" },
+                { name: "Asa Koroso 1/2kg", price: "500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ቆሮሶ" },
+                { name: "Asa Koroso 1kg", price: "700.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ቆሮሶ" },
+                { name: "Asa Shekla 1/2kg", price: "800.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ሸክላ" },
+                { name: "Asa Family Combo", price: "1500.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ፋሚሊ ኮምቦ" },
+                { name: "Asa Shekla 1kg", price: "1500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ሸክላ" }
+            ]
+        },
+        {
+            id: "chicken-roasted",
+            title: "Chicken & Roasted",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "Ye'Beg Arusto", price: "600.00", image: "/images/des9-logo.jpg", description: "የበግ አሩስቶ" },
+                { name: "Whole Chicken Leg (6 pcs)", price: "1700.00", image: "/images/chicken roasted.jpg", description: "ሙሉ ዶሮ እግር" },
+                { name: "Whole Chicken Arusto", price: "2500.00", image: "/images/whole chicken.webp", description: "ሙሉ ዶሮ አሩስቶ" }
+            ]
+        },
+        {
+            id: "burgers-pizza",
+            title: "Burgers & Pizza",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "Beef Burger", price: "350.00", image: "/images/photo_5884088003225914876_x.jpg", description: "" },
+                { name: "Cheese Burger", price: "400.00", image: "/images/photo_5884088003225914877_y.jpg", description: "" },
+                { name: "Chicken Burger", price: "500.00", image: "/images/photo_5884088003225914876_x.jpg", description: "" },
+                { name: "DeS9 Special Burger", price: "550.00", image: "/images/photo_5884088003225914877_y.jpg", description: "" },
+                { name: "Chicken Special Burger", price: "650.00", image: "/images/photo_5884088003225914876_x.jpg", description: "" },
+                { name: "DeS9 Double Burger", price: "650.00", image: "/images/photo_5884088003225914877_y.jpg", description: "" },
+                { name: "Slice Pizza", price: "125.00", image: "/images/photo_5884088003225914872_x.jpg", description: "" },
+                { name: "Margarita Pizza", price: "400.00", image: "/images/photo_5884088003225914874_y.jpg", description: "" },
+                { name: "Vegetable Pizza", price: "400.00", image: "/images/photo_5884088003225914872_x.jpg", description: "" },
+                { name: "Beef Pizza", price: "500.00", image: "/images/photo_5884088003225914874_y.jpg", description: "" },
+                { name: "Tuna Pizza", price: "500.00", image: "/images/photo_5884088003225914872_x.jpg", description: "" },
+                { name: "Chicken Pizza", price: "550.00", image: "/images/photo_5884088003225914874_y.jpg", description: "" },
+                { name: "DeS9 Special Pizza", price: "650.00", image: "/images/photo_5884088003225914872_x.jpg", description: "" },
+                { name: "Extra Topping", price: "150.00", image: "/images/photo_5884088003225914874_y.jpg", description: "" }
+            ]
+        },
+        {
+            id: "sandwiches-wraps",
+            title: "Sandwiches & Wraps",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "Egg Sandwich", price: "250.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
+                { name: "Vegetable Sandwich", price: "250.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
+                { name: "Beef Borito", price: "300.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
+                { name: "Tuna Borito", price: "300.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
+                { name: "Cheese Sandwich", price: "320.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
+                { name: "Fish Sandwich", price: "400.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
+                { name: "Ham & Cheese Sandwich", price: "400.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
+                { name: "DeS9 Special Borito", price: "400.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
+                { name: "Tuna Sandwich", price: "500.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" }
+            ]
+        },
+        {
+            id: "extras",
+            title: "Extras",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "Injera / Kocho", price: "30.00", image: "/images/injera.webp", description: "እንጀራ / ቆጮ" },
+                { name: "Takeaway Package", price: "50.00", image: "/images/package.jpg", description: "" }
+            ]
+        },
+        {
             id: "bar-specials",
             title: "Bar Specials",
             categoryImage: "/images/bar special.jpg",
@@ -169,7 +240,8 @@ export const menuData = {
                 { name: "Jack Daniel's", image: "/images/photo_5884088003225914806_x.jpg", description: "" },
                 { name: "Chivas Regal", image: "/images/photo_5884088003225914808_x.jpg", description: "" }
             ]
-        }
+        },
+
     ],
     am: [
         {
@@ -261,6 +333,77 @@ export const menuData = {
             ]
         },
         {
+            id: "fish-dishes",
+            title: "የዓሣ ምግቦች",
+            categoryImage: "/images/photo_5884088003225914871_y.jpg",
+            items: [
+                { name: "አሳ ለብለብ", price: "400.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
+                { name: "አሳ ኮተሌት", price: "400.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" },
+                { name: "አሳ ጉላሽ", price: "400.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
+                { name: "አሳ ቆሮሶ 1/2kg", price: "500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" },
+                { name: "አሳ ቆሮሶ 1kg", price: "700.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
+                { name: "አሳ ሸክላ 1/2kg", price: "800.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" },
+                { name: "አሳ ፋሚሊ ኮምቦ", price: "1500.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
+                { name: "አሳ ሸክላ 1kg", price: "1500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" }
+            ]
+        },
+        {
+            id: "chicken-roasted",
+            title: "ዶሮ እና አሩስቶ",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "የበግ አሩስቶ", price: "600.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ሙሉ ዶሮ እግር (6 pcs)", price: "1700.00", image: "/images/chicken roasted.jpg", description: "" },
+                { name: "ሙሉ ዶሮ አሩስቶ", price: "2500.00", image: "/images/whole chicken.webp", description: "" }
+            ]
+        },
+        {
+            id: "burgers-pizza",
+            title: "በርገር እና ፒዛ",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "የበሬ በርገር", price: "350.00", image: "/images/photo_5884088003225914876_x.jpg", description: "" },
+                { name: "ቺዝ በርገር", price: "400.00", image: "/images/photo_5884088003225914877_y.jpg", description: "" },
+                { name: "የዶሮ በርገር", price: "500.00", image: "/images/photo_5884088003225914876_x.jpg", description: "" },
+                { name: "ደሥ፱ ስፔሻል በርገር", price: "550.00", image: "/images/photo_5884088003225914877_y.jpg", description: "" },
+                { name: "የዶሮ ስፔሻል በርገር", price: "650.00", image: "/images/photo_5884088003225914876_x.jpg", description: "" },
+                { name: "ደሥ፱ ደብል በርገር", price: "650.00", image: "/images/photo_5884088003225914877_y.jpg", description: "" },
+                { name: "ስላይስ ፒዛ", price: "125.00", image: "/images/photo_5884088003225914872_x.jpg", description: "" },
+                { name: "ማርጋሪታ ፒዛ", price: "400.00", image: "/images/photo_5884088003225914874_y.jpg", description: "" },
+                { name: "የአትክልት ፒዛ", price: "400.00", image: "/images/photo_5884088003225914872_x.jpg", description: "" },
+                { name: "የበሬ ፒዛ", price: "500.00", image: "/images/photo_5884088003225914874_y.jpg", description: "" },
+                { name: "ቱና ፒዛ", price: "500.00", image: "/images/photo_5884088003225914872_x.jpg", description: "" },
+                { name: "የዶሮ ፒዛ", price: "550.00", image: "/images/photo_5884088003225914874_y.jpg", description: "" },
+                { name: "ደሥ፱ ስፔሻል ፒዛ", price: "650.00", image: "/images/photo_5884088003225914872_x.jpg", description: "" },
+                { name: "ተጨማሪ ቶፒንግ", price: "150.00", image: "/images/photo_5884088003225914874_y.jpg", description: "" }
+            ]
+        },
+        {
+            id: "sandwiches-wraps",
+            title: "ሳንድዊች እና ጥቅል",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "የእንቁላል ሳንድዊች", price: "250.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
+                { name: "የአትክልት ሳንድዊች", price: "250.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
+                { name: "የበሬ ቦሪቶ", price: "300.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
+                { name: "ቱና ቦሪቶ", price: "300.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
+                { name: "ቺዝ ሳንድዊች", price: "320.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
+                { name: "የአሳ ሳንድዊች", price: "400.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
+                { name: "ሃም እና ቺዝ ሳንድዊች", price: "400.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
+                { name: "ደሥ፱ ስፔሻል ቦሪቶ", price: "400.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
+                { name: "ቱና ሳንድዊች", price: "500.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" }
+            ]
+        },
+        {
+            id: "extras",
+            title: "ተጨማሪዎች",
+            categoryImage: "/images/des9-logo.jpg",
+            items: [
+                { name: "እንጀራ / ቆጮ", price: "30.00", image: "/images/injera.webp", description: "" },
+                { name: "ፓርሰል", price: "50.00", image: "/images/package.jpg", description: "" }
+            ]
+        },
+        {
             id: "bar-specials",
             title: "የባር ልዩ ነገሮች",
             categoryImage: "/images/bar special.jpg",
@@ -337,10 +480,9 @@ export const menuData = {
             categoryImage: "/images/header_whisky.png",
             items: [
                 { name: "ጆኒ ዎከር ሬድ ሌብል", image: "/images/photo_5884088003225914804_x.jpg", description: "" },
-                { name: "ጆኒ ዎከር ብላክ ሌብል", image: "/images/photo_5884088003225914805_x.jpg", description: "" },
-                { name: "ጃክ ዳንኤል", image: "/images/photo_5884088003225914806_x.jpg", description: "" },
                 { name: "ቺቫስ ሪጋል", image: "/images/photo_5884088003225914808_x.jpg", description: "" }
             ]
-        }
+        },
+
     ]
 };
