@@ -3,7 +3,7 @@ export const menuData = {
         {
             id: "fasting-breakfast",
             title: "Fasting Breakfast",
-            categoryImage: "/images/cat_fasting_breakfast.png",
+            categoryImage: "/images/photo_5915545284299656353_x.jpg",
             items: [
                 { name: "Ful", price: "200.00", image: "/images/ful.jpg", description: "Fava beans with spices" },
                 { name: "Chechebsa", price: "200.00", image: "/images/CHECHEBSA.jpg", description: "Shredded flatbread in spiced oil" },
@@ -20,7 +20,7 @@ export const menuData = {
         {
             id: "non-fasting-breakfast",
             title: "Non-Fasting Breakfast",
-            categoryImage: "/images/cat_non_fasting_breakfast.png",
+            categoryImage: "/images/photo_5915545284299656359_x.jpg",
             items: [
                 { name: "Enkulal Firfir", price: "250.00", image: "/images/enkualal firfir.jpg", description: "Scrambled eggs with injera or bread" },
                 { name: "Enkulal Sils", price: "250.00", image: "/images/enkualal sils.jpg", description: "Eggs cooked in tomato stew" },
@@ -35,7 +35,7 @@ export const menuData = {
         {
             id: "fasting-lunch-dinner",
             title: "Fasting Lunch & Dinner",
-            categoryImage: "/images/cat_fasting_lunch_dinner.png",
+            categoryImage: "/images/photo_5915545284299656364_x.jpg",
             items: [
                 { name: "Shiro", price: "170.00", image: "/images/photo_5884088003225914759_x.jpg", description: "Chickpea stew" },
                 { name: "Tegabino", price: "220.00", image: "/images/photo_5884088003225914760_x.jpg", description: "Thick chickpea stew served in a clay pot" },
@@ -54,7 +54,7 @@ export const menuData = {
         {
             id: "non-fasting-lunch-dinner",
             title: "Non-Fasting Lunch & Dinner",
-            categoryImage: "/images/cat_non_fasting_lunch_dinner.png",
+            categoryImage: "/images/photo_5915545284299656363_y.jpg",
             items: [
                 { name: "Ye'Beg Kikil", price: "500.00", image: "/images/ye_beg_kikil.jpg", description: "Boiled lamb soup/stew" },
                 { name: "Ye'Beg Tibs Tefersho", price: "500.00", image: "/images/ye_beg_tibs_tefersho.jpg", description: "Roasted lamb spread over injera" },
@@ -106,7 +106,7 @@ export const menuData = {
         {
             id: "chicken-roasted",
             title: "Chicken & Roasted",
-            categoryImage: "/images/des9-logo.jpg",
+            categoryImage: "/images/photo_5915545284299656367_x.jpg",
             items: [
                 { name: "Ye'Beg Arusto", price: "600.00", image: "/images/des9-logo.jpg", description: "የበግ አሩስቶ" },
                 { name: "Whole Chicken Leg (6 pcs)", price: "1700.00", image: "/images/chicken roasted.jpg", description: "ሙሉ ዶሮ እግር" },
@@ -116,7 +116,7 @@ export const menuData = {
         {
             id: "burgers-pizza",
             title: "Burgers & Pizza",
-            categoryImage: "/images/des9-logo.jpg",
+            categoryImage: "/images/photo_5915545284299656366_y (1).jpg",
             items: [
                 { name: "Beef Burger", price: "350.00", image: "/images/photo_5884088003225914876_x.jpg", description: "" },
                 { name: "Cheese Burger", price: "400.00", image: "/images/photo_5884088003225914877_y.jpg", description: "" },
@@ -137,7 +137,7 @@ export const menuData = {
         {
             id: "sandwiches-wraps",
             title: "Sandwiches & Wraps",
-            categoryImage: "/images/des9-logo.jpg",
+            categoryImage: "/images/photo_5915545284299656365_y.jpg",
             items: [
                 { name: "Egg Sandwich", price: "250.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
                 { name: "Vegetable Sandwich", price: "250.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
@@ -203,7 +203,7 @@ export const menuData = {
                 { name: "Heineken Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
                 { name: "Arada Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
                 { name: "Non-alcoholic beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Draft", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" }
+                { name: "Draft", price: "100.00", image: "/images/photo_5915545284299656337_y.jpg", description: "" }
             ]
         },
         {
@@ -249,7 +249,7 @@ export const menuData = {
         {
             id: "fasting-breakfast",
             title: "የፆም ቁርስ",
-            categoryImage: "/images/cat_fasting_breakfast.png",
+            categoryImage: "/images/photo_5915545284299656353_x.jpg",
             items: [
                 { name: "ፉል", price: "200.00", image: "/images/ful.jpg", description: "" },
                 { name: "ጨጨብሳ", price: "200.00", image: "/images/CHECHEBSA.jpg", description: "" },
@@ -266,7 +266,7 @@ export const menuData = {
         {
             id: "non-fasting-breakfast",
             title: "የፍስክ ቁርስ",
-            categoryImage: "/images/cat_non_fasting_breakfast.png",
+            categoryImage: "/images/photo_5915545284299656359_x.jpg",
             items: [
                 { name: "እንቁላል ፍርፍር", price: "250.00", image: "/images/enkualal firfir.jpg", description: "" },
                 { name: "እንቁላል ስልስ", price: "250.00", image: "/images/enkualal sils.jpg", description: "" },
@@ -281,7 +281,7 @@ export const menuData = {
         {
             id: "fasting-lunch-dinner",
             title: "የፆም ምሳና እራት",
-            categoryImage: "/images/cat_fasting_lunch_dinner.png",
+            categoryImage: "/images/photo_5915545284299656364_x.jpg",
             items: [
                 { name: "ሽሮ", price: "170.00", image: "/images/photo_5884088003225914759_x.jpg", description: "" },
                 { name: "ተጋቢኖ", price: "220.00", image: "/images/photo_5884088003225914760_x.jpg", description: "" },
@@ -300,7 +300,7 @@ export const menuData = {
         {
             id: "non-fasting-lunch-dinner",
             title: "የፍስክ ምሳና እራት",
-            categoryImage: "/images/cat_non_fasting_lunch_dinner.png",
+            categoryImage: "/images/photo_5915545284299656363_y.jpg",
             items: [
                 { name: "የበግ ቅቅል", price: "500.00", image: "/images/ye_beg_kikil.jpg", description: "" },
                 { name: "የበግ ጥብስ ተፈርሾ", price: "500.00", image: "/images/ye_beg_tibs_tefersho.jpg", description: "" },
@@ -352,7 +352,7 @@ export const menuData = {
         {
             id: "chicken-roasted",
             title: "ዶሮ እና አሩስቶ",
-            categoryImage: "/images/des9-logo.jpg",
+            categoryImage: "/images/photo_5915545284299656367_x.jpg",
             items: [
                 { name: "የበግ አሩስቶ", price: "600.00", image: "/images/des9-logo.jpg", description: "" },
                 { name: "ሙሉ ዶሮ እግር (6 pcs)", price: "1700.00", image: "/images/chicken roasted.jpg", description: "" },
@@ -362,7 +362,7 @@ export const menuData = {
         {
             id: "burgers-pizza",
             title: "በርገር እና ፒዛ",
-            categoryImage: "/images/des9-logo.jpg",
+            categoryImage: "/images/photo_5915545284299656366_y (1).jpg",
             items: [
                 { name: "የበሬ በርገር", price: "350.00", image: "/images/photo_5884088003225914876_x.jpg", description: "" },
                 { name: "ቺዝ በርገር", price: "400.00", image: "/images/photo_5884088003225914877_y.jpg", description: "" },
@@ -383,7 +383,7 @@ export const menuData = {
         {
             id: "sandwiches-wraps",
             title: "ሳንድዊች እና ጥቅል",
-            categoryImage: "/images/des9-logo.jpg",
+            categoryImage: "/images/photo_5915545284299656365_y.jpg",
             items: [
                 { name: "የእንቁላል ሳንድዊች", price: "250.00", image: "/images/photo_5884088003225914873_x.jpg", description: "" },
                 { name: "የአትክልት ሳንድዊች", price: "250.00", image: "/images/photo_5883980160892079137_y.jpg", description: "" },
@@ -449,7 +449,7 @@ export const menuData = {
                 { name: "ሄኒከን ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
                 { name: "አራዳ ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
                 { name: "አልኮል አልባ ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "ድራፍት", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" }
+                { name: "ድራፍት", price: "100.00", image: "/images/photo_5915545284299656337_y.jpg", description: "" }
             ]
         },
         {

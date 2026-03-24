@@ -21,4 +21,14 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+# Roots temporary files
+/*.jpg
+/*.png
+/*.webp
+/*.jfif
+/*.txt
+/*.PNG
+/*.webp
+/*.jfif
+/photo_*
+
