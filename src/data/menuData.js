@@ -201,7 +201,9 @@ export const menuData = {
                 { name: "Harar Beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
                 { name: "Bedele Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
                 { name: "Heineken Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Arada Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" }
+                { name: "Arada Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Non-alcoholic beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Draft", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" }
             ]
         },
         {
@@ -445,7 +447,9 @@ export const menuData = {
                 { name: "ሐረር ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
                 { name: "በደሌ ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
                 { name: "ሄኒከን ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "አራዳ ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" }
+                { name: "አራዳ ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "አልኮል አልባ ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ድራፍት", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" }
             ]
         },
         {
