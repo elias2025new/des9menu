@@ -111,7 +111,7 @@ const TRANSLATIONS = {
     'extra': 'ተጨማሪ',
 };
 
-function smartTranslate(text) {
+export function smartTranslate(text) {
     if (!text) return '';
     const lower = text.toLowerCase().trim();
     // Check direct match
