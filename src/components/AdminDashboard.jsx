@@ -295,6 +295,7 @@ export default function AdminDashboard() {
     const [menuData, setMenuData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [saving, setSaving] = useState(false);
+    const [loadingMsg, setLoadingMsg] = useState('Saving changes...');
     const [dbEmpty, setDbEmpty] = useState(false);
     const [activeCatId, setActiveCatId] = useState('');
     const [prices, setPrices] = useState({});
@@ -329,7 +330,8 @@ export default function AdminDashboard() {
         });
     }, [authed]);
 
-    const saveToDb = async (data, successMsg) => {
+    const saveToDb = async (data, successMsg, customLoadingMsg = 'Saving changes...') => {
+        setLoadingMsg(customLoadingMsg);
         setSaving(true);
         try {
             await saveMenuToDB(data, getAdminPassword());
@@ -367,14 +369,14 @@ export default function AdminDashboard() {
     const handleUpdateItem = (catId, idx, updates) => {
         const updated = updateItemDetailsLocal(menuData, catId, idx, 'en', updates);
         setEditTarget(null);
-        saveToDb(updated, `Item details updated!`);
+        saveToDb(updated, `Item details updated!`, 'Updating item...');
     };
 
     const handleDeleteConfirm = () => {
         const updated = deleteItemLocal(menuData, deleteTarget.catId, deleteTarget.idx);
         const name = deleteTarget.name;
         setDeleteTarget(null);
-        saveToDb(updated, `"${name}" removed.`);
+        saveToDb(updated, `"${name}" removed.`, 'Deleting item...');
     };
 
     const handleReset = () => {
@@ -570,7 +572,7 @@ export default function AdminDashboard() {
                 <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-[2px]">
                     <div className="bg-[#161a23] border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col items-center gap-4">
                         <Loader size={32} className="text-emerald-500 animate-spin" />
-                        <p className="text-white font-bold text-sm">Saving changes...</p>
+                        <p className="text-white font-bold text-sm">{loadingMsg}</p>
                     </div>
                 </div>
             )}
