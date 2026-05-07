@@ -9,6 +9,9 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
   },
+  build: {
+    minify: false,
+  },
   plugins: [
     react(),
     tailwindcss(),

@@ -11,7 +11,7 @@ const Footer = ({ currentLang = 'en' }) => {
         {
             name: 'Facebook',
             icon: <Facebook size={20} />,
-            url: 'https://www.facebook.com/swissinnnexusaddisababa',
+            url: 'https://www.facebook.com/share/18UTCkH585/',
             color: 'text-white',
             bg: 'bg-[#1877F2]'
         },
@@ -25,14 +25,14 @@ const Footer = ({ currentLang = 'en' }) => {
         {
             name: 'TikTok',
             icon: <Music2 size={20} />,
-            url: 'https://www.tiktok.com/@swiss_inn_nexus_hotel',
+            url: 'https://tiktok.com/@des9restaurantandlounge',
             color: 'text-white',
             bg: 'bg-black'
         },
         {
             name: 'Telegram',
             icon: <Send size={20} />,
-            url: 'https://t.me/swissinnnexus',
+            url: 'https://t.me/sildes9',
             color: 'text-white',
             bg: 'bg-[#229ED9]'
         }
@@ -55,7 +55,10 @@ const Footer = ({ currentLang = 'en' }) => {
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-[10px] font-bold text-white/40 uppercase tracking-wider">{t.phone}</span>
-                                <span className="text-sm font-bold text-white tracking-tight">Addis Ababa, Ethiopia</span>
+                                <div className="flex flex-col gap-0.5">
+                                    <a href="tel:+251902333344" className="text-sm font-bold text-white tracking-tight hover:text-white/80 transition-colors">+251 902 333 344</a>
+                                    <a href="tel:+251911099901" className="text-sm font-bold text-white tracking-tight hover:text-white/80 transition-colors">+251 911 099 901</a>
+                                </div>
                             </div>
                         </div>
 
@@ -72,7 +75,7 @@ const Footer = ({ currentLang = 'en' }) => {
 
                         {/* Website */}
                         <a
-                            href="#"
+                            href="https://des9.net"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-4 group"
@@ -82,7 +85,7 @@ const Footer = ({ currentLang = 'en' }) => {
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-[10px] font-bold text-white/40 uppercase tracking-wider">{t.website}</span>
-                                <span className="text-sm font-bold text-white tracking-tight lowercase">#</span>
+                                <span className="text-sm font-bold text-white tracking-tight lowercase">des9.net</span>
                             </div>
                         </a>
                     </div>

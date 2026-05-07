@@ -5,15 +5,14 @@ export const menuData = {
             title: "Fasting Breakfast",
             categoryImage: "/images/photo_5915545284299656353_x.jpg",
             items: [
-                { name: "Ful", price: "200.00", image: "/images/ful.jpg", description: "Fava beans with spices" },
-                { name: "Chechebsa", price: "200.00", image: "/images/CHECHEBSA.jpg", description: "Shredded flatbread in spiced oil" },
-                { name: "Kinche ke Chechebsa", price: "300.00", image: "/images/CHECHEBSA.jpg", description: "Cracked wheat with Chechebsa" },
-                { name: "Kinche", price: "250.00", image: "/images/kINCHE.jpg", description: "Cracked wheat" },
-                { name: "Timatim Sils", price: "200.00", image: "/images/ቲማቲም ስልስ.jpg", description: "Tomato stew" },
-                { name: "Besso Chibto", price: "150.00", image: "/images/Beso chiobto.jpg", description: "Seasoned roasted barley dough" },
-                { name: "Besso Juice", price: "150.00", image: "/images/BESO Juice.jpg", description: "Roasted barley drink" },
+                { name: "Ful", price: "250.00", image: "/images/ful.jpg", description: "Fava beans with spices" },
+                { name: "Chechebsa", price: "250.00", image: "/images/CHECHEBSA.jpg", description: "Shredded flatbread in spiced oil" },
+                { name: "Kinche ke Chechebsa", price: "350.00", image: "/images/CHECHEBSA.jpg", description: "Cracked wheat with Chechebsa" },
+                { name: "Kinche", price: "250.00", image: "/images/kinche_new.jpg", description: "Cracked wheat" },
+                { name: "Timatim Sils", price: "200.00", image: "/images/timatim sils.jpg", description: "Tomato stew" },
+                { name: "Besso Chibto with tea", price: "250.00", image: "/images/Beso chiobto.jpg", description: "Seasoned roasted barley dough" },
+                { name: "Besso Juice with honey", price: "250.00", image: "/images/BESO Juice.jpg", description: "Roasted barley drink" },
                 { name: "Telba Juice", price: "150.00", image: "/images/Capture.PNG", description: "Flaxseed drink" },
-                { name: "Ergo", price: "150.00", image: "/images/ERGO.jpg", description: "Ethiopian Yogurt" },
                 { name: "Shiro Fitfit", price: "300.00", image: "/images/shiro fitfit.jpg", description: "Shredded injera in chickpea stew" }
             ]
         },
@@ -24,12 +23,12 @@ export const menuData = {
             items: [
                 { name: "Enkulal Firfir", price: "250.00", image: "/images/enkualal firfir.jpg", description: "Scrambled eggs with injera or bread" },
                 { name: "Enkulal Sils", price: "250.00", image: "/images/enkualal sils.jpg", description: "Eggs cooked in tomato stew" },
-                { name: "Kintibtib", price: "400.00", image: "/images/des9-logo.jpg", description: "Mixed chopped meat stew" },
+                { name: "Kintibtib", price: "400.00", image: "/images/kintibtib.jpg", description: "Mixed chopped meat stew" },
                 { name: "Katelo", price: "400.00", image: "/images/katelo.jpg", description: "Spicy meat dish" },
                 { name: "Quanta / Tibs Firfir", price: "300.00", image: "/images/tibs_firfir.jpg", description: "Dried or fried beef stew mixed with injera" },
                 { name: "Dulet", price: "400.00", image: "/images/dulet.jpg", description: "Spicy minced tripe, liver, and lean beef" },
                 { name: "Special Chechebsa", price: "350.00", image: "/images/special_chechebsa.jpg", description: "Special shredded flatbread with spiced butter" },
-                { name: "Milas Senber", price: "300.00", image: "/images/photo_5884088003225914753_y.jpg", description: "Beef tongue and tripe stew" }
+                { name: "Milas Senber 1/2kg", price: "600.00", image: "/images/milas_senber.jpg", description: "Beef tongue and tripe stew" }
             ]
         },
         {
@@ -40,13 +39,13 @@ export const menuData = {
                 { name: "Shiro", price: "170.00", image: "/images/photo_5884088003225914759_x.jpg", description: "Chickpea stew" },
                 { name: "Tegabino", price: "220.00", image: "/images/photo_5884088003225914760_x.jpg", description: "Thick chickpea stew served in a clay pot" },
                 { name: "Beyaynetu", price: "250.00", image: "/images/photo_5884088003225914764_y.jpg", description: "Mixed vegan platter" },
-                { name: "Combo (Ethio-Italy)", price: "250.00", image: "/images/des9-logo.jpg", description: "Ethiopian & Italian mixed dish" },
-                { name: "Combo (Ethio-China)", price: "250.00", image: "/images/des9-logo.jpg", description: "Ethiopian & Chinese mixed dish" },
+                { name: "Combo (Ethio-Italy)", price: "250.00", image: "/images/combo.jpg", description: "Ethiopian & Italian mixed dish" },
+                { name: "Combo (Ethio-China)", price: "250.00", image: "/images/combo.jpg", description: "Ethiopian & Chinese mixed dish" },
                 { name: "Ye'Tsom Mulu Agelgil", price: "450.00", image: "/images/photo_5884088003225914766_x.jpg", description: "Full fasting meal wrapped in injera" },
                 { name: "Ye'Tsom Gimash Agelgil", price: "300.00", image: "/images/photo_5884088003225914766_x.jpg", description: "Half fasting meal wrapped in injera" },
                 { name: "Timatim Lebleb be Shiro", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "Warmed tomatoes served with Shiro" },
                 { name: "Timatim Lebleb be Dirkosh", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "Warmed tomatoes with dried injera" },
-                { name: "Shirshim", price: "300.00", image: "/images/photo_5884088003225914771_y.jpg", description: "Traditional grain stew" },
+                { name: "Shirshim", price: "300.00", image: "/images/shirshim.jpg", description: "Traditional grain stew" },
                 { name: "Dekeko", price: "300.00", image: "/images/des9-logo.jpg", description: "Spiced split pea stew" },
                 { name: "Atkilt Firfir", price: "300.00", image: "/images/photo_5884088003225914773_x.jpg", description: "Vegetable stew mixed with injera" }
             ]
@@ -60,22 +59,21 @@ export const menuData = {
                 { name: "Ye'Beg Tibs Tefersho", price: "500.00", image: "/images/ye_beg_tibs_tefersho.jpg", description: "Roasted lamb spread over injera" },
                 { name: "Ye'Beg Awaze Tibs", price: "500.00", image: "/images/ye_beg_awaze_tibs.jpg", description: "Lamb roasted in spicy Awaze paste" },
                 { name: "Ye'Beg Key Wot", price: "500.00", image: "/images/ye_beg_key_wot.jpg", description: "Spicy red lamb stew" },
-                { name: "Kitfo", price: "900.00", image: "/images/kitfo.jpg", description: "Minced raw/rare beef with spiced butter & mitmita" },
-                { name: "Zilzil Tibs", price: "700.00", image: "/images/zilzil_tibs.jpg", description: "Strips of fried beef" },
-                { name: "Doro Wot", price: "700.00", image: "/images/doro_wot.jpg", description: "Spicy chicken stew (Thursdays Only)" },
+                { name: "Kitfo", price: "900.00", image: "/images/kitfo_new.jpg", description: "Minced raw/rare beef with spiced butter & mitmita" },
+                { name: "Zilzil Tibs", price: "700.00", image: "/images/zilzil_tibs_new.jpg", description: "Strips of fried beef" },
+                { name: "Doro Wot", price: "900.00", image: "/images/doro_wot.jpg", description: "Spicy chicken stew (Thursdays Only)" },
                 { name: "Chikina Tibs", price: "500.00", image: "/images/chikina_tibs.jpg", description: "Tenderloin beef stir-fry" },
                 { name: "Ye'Bere Tibs", price: "400.00", image: "/images/ye_bere_tibs.jpg", description: "Beef stir-fry" },
                 { name: "Kitfo Firfir", price: "400.00", image: "/images/kitfo_firfir.jpg", description: "Minced beef mixed with injera" },
                 { name: "Afagn", price: "500.00", image: "/images/afagn.jpg", description: "Smothered/steamed spicy meat" },
                 { name: "Bozena Shiro", price: "300.00", image: "/images/bozena_shiro.jpg", description: "Chickpea stew cooked with meat" },
-                { name: "Shiro Tikilil", price: "500.00", image: "/images/photo_5884088003225914759_x.jpg", description: "Shiro and meat wrapped in injera roll" },
+                { name: "Shiro Tikilil", price: "500.00", image: "/images/shiro_tikilil.jpg", description: "Shiro and meat wrapped in injera roll" },
                 { name: "Tripa", price: "400.00", image: "/images/tripa.jpg", description: "Tripe stew" },
                 { name: "Chororsa", price: "900.00", image: "/images/chororsa.jpg", description: "Traditional Gurage meat dish" },
                 { name: "Abzi", image: "/images/des9-logo.jpg", description: "Traditional dish with spiced butter, cottage cheese, aged cheese, and niger seed" },
                 { name: "Chukame be Tibs", price: "900.00", image: "/images/chukame_be_tibs.jpg", description: "Traditional dish served with fried meat" },
                 { name: "Chukame be Gomen", price: "900.00", image: "/images/chukame_be_gomen.jpg", description: "Traditional dish served with collard greens" },
-                { name: "Bursame", price: "900.00", image: "/images/bursame.jpg", description: "Traditional Gurage meat and butter dish" },
-                { name: "Lasagna", price: "300.00", image: "/images/photo_5884088003225914815_x.jpg", description: "Classic layered pasta with meat sauce and cheese" }
+                { name: "Bursame", price: "900.00", image: "/images/bursame.jpg", description: "Traditional Gurage meat and butter dish" }
             ]
         },
         {
@@ -93,11 +91,11 @@ export const menuData = {
             title: "Fish Dishes",
             categoryImage: "/images/photo_5884088003225914871_y.jpg",
             items: [
-                { name: "Asa Lebleb", price: "400.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ለብለብ" },
-                { name: "Asa Cotelette", price: "400.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ኮተሌት" },
-                { name: "Asa Gulash", price: "400.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ጉላሽ" },
-                { name: "Asa Koroso 1/2kg", price: "500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ቆሮሶ" },
-                { name: "Asa Koroso 1kg", price: "700.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ቆሮሶ" },
+                { name: "Asa Lebleb", price: "500.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ለብለብ" },
+                { name: "Asa Cotelette", price: "500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ኮተሌት" },
+                { name: "Asa Gulash", price: "500.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ጉላሽ" },
+                { name: "Asa Koroso 1/2kg", price: "600.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ቆሮሶ" },
+                { name: "Asa Koroso 1kg", price: "1000.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ቆሮሶ" },
                 { name: "Asa Shekla 1/2kg", price: "800.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ሸክላ" },
                 { name: "Asa Family Combo", price: "1500.00", image: "/images/photo_5884088003225914871_y.jpg", description: "አሳ ፋሚሊ ኮምቦ" },
                 { name: "Asa Shekla 1kg", price: "1500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "አሳ ሸክላ" }
@@ -174,11 +172,11 @@ export const menuData = {
             title: "Soft Drinks",
             categoryImage: "/images/sofyt drink.jpg",
             items: [
-                { name: "Coca-Cola / Pepsi", price: "60.00", image: "/images/photo_5884088003225914775_y (1).jpg", description: "" },
-                { name: "Ambo Mineral Water", price: "60.00", image: "/images/photo_5884088003225914776_x.jpg", description: "" },
-                { name: "Small Water", price: "30.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
-                { name: "Water 1L", price: "35.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
-                { name: "Water 2L", price: "60.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" }
+                { name: "Coca-Cola / Pepsi", price: "70.00", image: "/images/photo_5884088003225914775_y (1).jpg", description: "" },
+                { name: "Ambo Mineral Water", price: "70.00", image: "/images/photo_5884088003225914776_x.jpg", description: "" },
+                { name: "Small Water", price: "35.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
+                { name: "Water 1L", price: "45.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
+                { name: "Water 2L", price: "65.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" }
             ]
         },
         {
@@ -186,7 +184,7 @@ export const menuData = {
             title: "Hot Drinks",
             categoryImage: "/images/tea and coffe.webp",
             items: [
-                { name: "Tea", price: "30.00", image: "/images/Tea.jpg", description: "" },
+                { name: "Tea", price: "35.00", image: "/images/Tea.jpg", description: "" },
                 { name: "Coffee", price: "40.00", image: "/images/coffee.jpg", description: "" }
             ]
         },
@@ -195,15 +193,16 @@ export const menuData = {
             title: "Beer",
             categoryImage: "/images/header_beer_bottled.png",
             items: [
-                { name: "St. George Beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Habesha Beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Dashen Beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Harar Beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Bedele Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Heineken Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Arada Beer", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Non-alcoholic beer", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "Draft", price: "100.00", image: "/images/photo_5915545284299656337_y.jpg", description: "" }
+                { name: "St. George Beer", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Habesha Beer", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Dashen Beer", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Harar Beer", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Bedele Beer", price: "120.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Heineken Beer", price: "120.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Arada Beer", price: "120.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Alcohol-Free Beer", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "Draft jambo", price: "75.00", image: "/images/photo_5915545284299656337_y.jpg", description: "" },
+                { name: "Single jambo", price: "70.00", image: "/images/photo_5915545284299656337_y.jpg", description: "" }
             ]
         },
         {
@@ -251,15 +250,14 @@ export const menuData = {
             title: "የፆም ቁርስ",
             categoryImage: "/images/photo_5915545284299656353_x.jpg",
             items: [
-                { name: "ፉል", price: "200.00", image: "/images/ful.jpg", description: "" },
-                { name: "ጨጨብሳ", price: "200.00", image: "/images/CHECHEBSA.jpg", description: "" },
-                { name: "ቂንጨ ከጨጨብሳ", price: "300.00", image: "/images/CHECHEBSA.jpg", description: "" },
-                { name: "ቂንጨ", price: "250.00", image: "/images/kINCHE.jpg", description: "" },
-                { name: "ቲማቲም ስልስ", price: "200.00", image: "/images/ቲማቲም ስልስ.jpg", description: "" },
-                { name: "በሶ ጭብጦ", price: "150.00", image: "/images/Beso chiobto.jpg", description: "" },
-                { name: "በሶ ጁስ", price: "150.00", image: "/images/BESO Juice.jpg", description: "" },
+                { name: "ፉል", price: "250.00", image: "/images/ful.jpg", description: "" },
+                { name: "ጨጨብሳ", price: "250.00", image: "/images/CHECHEBSA.jpg", description: "" },
+                { name: "ቂንጨ ከጨጨብሳ", price: "350.00", image: "/images/CHECHEBSA.jpg", description: "" },
+                { name: "ቂንጨ", price: "250.00", image: "/images/kinche_new.jpg", description: "" },
+                { name: "ቲማቲም ስልስ", price: "200.00", image: "/images/timatim sils.jpg", description: "" },
+                { name: "በሶ ጭብጦ በሻይ", price: "250.00", image: "/images/Beso chiobto.jpg", description: "" },
+                { name: "በሶ ጁስ በማር", price: "250.00", image: "/images/BESO Juice.jpg", description: "" },
                 { name: "ተልባ ጁስ", price: "150.00", image: "/images/Capture.PNG", description: "" },
-                { name: "እርጎ", price: "150.00", image: "/images/ERGO.jpg", description: "" },
                 { name: "ሽሮ ፍትፍት", price: "300.00", image: "/images/shiro fitfit.jpg", description: "" }
             ]
         },
@@ -270,12 +268,12 @@ export const menuData = {
             items: [
                 { name: "እንቁላል ፍርፍር", price: "250.00", image: "/images/enkualal firfir.jpg", description: "" },
                 { name: "እንቁላል ስልስ", price: "250.00", image: "/images/enkualal sils.jpg", description: "" },
-                { name: "ቅንጥብጥብ", price: "400.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ቅንጥብጥብ", price: "400.00", image: "/images/kintibtib.jpg", description: "" },
                 { name: "ቃጠሎ", price: "400.00", image: "/images/katelo.jpg", description: "" },
                 { name: "ቆንጣ / ጥብስ ፍርፍር", price: "300.00", image: "/images/tibs_firfir.jpg", description: "" },
                 { name: "ዱለት", price: "400.00", image: "/images/dulet.jpg", description: "" },
                 { name: "ስፔሻል ጨጨብሳ", price: "350.00", image: "/images/special_chechebsa.jpg", description: "" },
-                { name: "ምላስ ሰንበር", price: "300.00", image: "/images/photo_5884088003225914753_y.jpg", description: "" }
+                { name: "ምላስ ሰንበር 1/2kg", price: "600.00", image: "/images/milas_senber.jpg", description: "" }
             ]
         },
         {
@@ -286,13 +284,13 @@ export const menuData = {
                 { name: "ሽሮ", price: "170.00", image: "/images/photo_5884088003225914759_x.jpg", description: "" },
                 { name: "ተጋቢኖ", price: "220.00", image: "/images/photo_5884088003225914760_x.jpg", description: "" },
                 { name: "በያይነቱ", price: "250.00", image: "/images/photo_5884088003225914764_y.jpg", description: "" },
-                { name: "ኮምቦ (ኢትዮ ኢታሊ)", price: "250.00", image: "/images/des9-logo.jpg", description: "" },
-                { name: "ኮምቦ (ኢትዮ ቻይና)", price: "250.00", image: "/images/des9-logo.jpg", description: "" },
+                { name: "ኮምቦ (ኢትዮ ኢታሊ)", price: "250.00", image: "/images/combo.jpg", description: "" },
+                { name: "ኮምቦ (ኢትዮ ቻይና)", price: "250.00", image: "/images/combo.jpg", description: "" },
                 { name: "የፆም ሙሉ አገልግል", price: "450.00", image: "/images/photo_5884088003225914766_x.jpg", description: "" },
                 { name: "የፆም ግማሽ አገልግል", price: "300.00", image: "/images/photo_5884088003225914766_x.jpg", description: "" },
                 { name: "ቲማቲም ለብለብ በሽሮ", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "" },
                 { name: "ቲማቲም ለብለብ በድርቆሽ", price: "300.00", image: "/images/photo_5884088003225914767_x.jpg", description: "" },
-                { name: "ሽርሽም", price: "300.00", image: "/images/photo_5884088003225914771_y.jpg", description: "" },
+                { name: "ሽርሽም", price: "300.00", image: "/images/shirshim.jpg", description: "" },
                 { name: "ደቀቆ", price: "300.00", image: "/images/des9-logo.jpg", description: "" },
                 { name: "አትክልት ፍርፍር", price: "300.00", image: "/images/photo_5884088003225914773_x.jpg", description: "" }
             ]
@@ -306,22 +304,21 @@ export const menuData = {
                 { name: "የበግ ጥብስ ተፈርሾ", price: "500.00", image: "/images/ye_beg_tibs_tefersho.jpg", description: "" },
                 { name: "የበግ አዋዜ ጥብስ", price: "500.00", image: "/images/ye_beg_awaze_tibs.jpg", description: "" },
                 { name: "የበግ ቀይ ወጥ", price: "500.00", image: "/images/ye_beg_key_wot.jpg", description: "" },
-                { name: "ክትፎ", price: "900.00", image: "/images/kitfo.jpg", description: "" },
-                { name: "ዝልዝል ጥብስ", price: "700.00", image: "/images/zilzil_tibs.jpg", description: "" },
-                { name: "ዶሮ ወጥ", price: "700.00", image: "/images/doro_wot.jpg", description: "(ሐሙስ ብቻ)" },
+                { name: "ክትፎ", price: "900.00", image: "/images/kitfo_new.jpg", description: "" },
+                { name: "ዝልዝል ጥብስ", price: "700.00", image: "/images/zilzil_tibs_new.jpg", description: "" },
+                { name: "ዶሮ ወጥ", price: "900.00", image: "/images/doro_wot.jpg", description: "(ሐሙስ ብቻ)" },
                 { name: "ጭቅና ጥብስ", price: "500.00", image: "/images/chikina_tibs.jpg", description: "" },
                 { name: "የበሬ ጥብስ", price: "400.00", image: "/images/ye_bere_tibs.jpg", description: "" },
                 { name: "ክትፎ ፍርፍር", price: "400.00", image: "/images/kitfo_firfir.jpg", description: "" },
                 { name: "አፋኝ", price: "500.00", image: "/images/afagn.jpg", description: "" },
                 { name: "ቦዘና ሽሮ", price: "300.00", image: "/images/bozena_shiro.jpg", description: "" },
-                { name: "ሽሮ ጥቅልል", price: "500.00", image: "/images/photo_5884088003225914759_x.jpg", description: "" },
+                { name: "ሽሮ ጥቅልል", price: "500.00", image: "/images/shiro_tikilil.jpg", description: "" },
                 { name: "ትሪፓ", price: "400.00", image: "/images/tripa.jpg", description: "" },
                 { name: "ጮሮርሳ", price: "900.00", image: "/images/chororsa.jpg", description: "" },
                 { name: "አብዚ", image: "/images/des9-logo.jpg", description: "(በድርጥ, በቂቤ, በአይብ, በመጣጣ, በኑግ)" },
                 { name: "ጩካሜ በጥብስ", price: "900.00", image: "/images/chukame_be_tibs.jpg", description: "" },
                 { name: "ጩካሜ በጎመን", price: "900.00", image: "/images/chukame_be_gomen.jpg", description: "" },
-                { name: "ቡርሳሜ", price: "900.00", image: "/images/bursame.jpg", description: "" },
-                { name: "ላዛኛ", price: "300.00", image: "/images/photo_5884088003225914815_x.jpg", description: "" }
+                { name: "ቡርሳሜ", price: "900.00", image: "/images/bursame.jpg", description: "" }
             ]
         },
         {
@@ -339,11 +336,11 @@ export const menuData = {
             title: "የዓሣ ምግቦች",
             categoryImage: "/images/photo_5884088003225914871_y.jpg",
             items: [
-                { name: "አሳ ለብለብ", price: "400.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
-                { name: "አሳ ኮተሌት", price: "400.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" },
-                { name: "አሳ ጉላሽ", price: "400.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
-                { name: "አሳ ቆሮሶ 1/2kg", price: "500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" },
-                { name: "አሳ ቆሮሶ 1kg", price: "700.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
+                { name: "አሳ ለብለብ", price: "500.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
+                { name: "አሳ ኮተሌት", price: "500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" },
+                { name: "አሳ ጉላሽ", price: "500.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
+                { name: "አሳ ቆሮሶ 1/2kg", price: "600.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" },
+                { name: "አሳ ቆሮሶ 1kg", price: "1000.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
                 { name: "አሳ ሸክላ 1/2kg", price: "800.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" },
                 { name: "አሳ ፋሚሊ ኮምቦ", price: "1500.00", image: "/images/photo_5884088003225914871_y.jpg", description: "" },
                 { name: "አሳ ሸክላ 1kg", price: "1500.00", image: "/images/photo_5884088003225914875_y.jpg", description: "" }
@@ -420,11 +417,11 @@ export const menuData = {
             title: "ሶፍት ድሪንክ",
             categoryImage: "/images/sofyt drink.jpg",
             items: [
-                { name: "ኮካ ኮላ/ፔፕሲ", price: "60.00", image: "/images/photo_5884088003225914775_y (1).jpg", description: "" },
-                { name: "አምቦ ጠበል", price: "60.00", image: "/images/photo_5884088003225914776_x.jpg", description: "" },
-                { name: "ትንሽ ውኃ", price: "30.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
-                { name: "1 ሊትር ዉሀ", price: "35.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
-                { name: "2 ሊትር ዉሀ", price: "60.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" }
+                { name: "ኮካ ኮላ/ፔፕሲ", price: "70.00", image: "/images/photo_5884088003225914775_y (1).jpg", description: "" },
+                { name: "አምቦ ጠበል", price: "70.00", image: "/images/photo_5884088003225914776_x.jpg", description: "" },
+                { name: "ትንሽ ውኃ", price: "35.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
+                { name: "1 ሊትር ዉሀ", price: "45.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" },
+                { name: "2 ሊትር ዉሀ", price: "65.00", image: "/images/photo_5884088003225914777_x.jpg", description: "" }
             ]
         },
         {
@@ -432,7 +429,7 @@ export const menuData = {
             title: "ትኩስ መጠጦች",
             categoryImage: "/images/tea and coffe.webp",
             items: [
-                { name: "ሻይ", price: "30.00", image: "/images/Tea.jpg", description: "" },
+                { name: "ሻይ", price: "35.00", image: "/images/Tea.jpg", description: "" },
                 { name: "ቡና", price: "40.00", image: "/images/coffee.jpg", description: "" }
             ]
         },
@@ -441,15 +438,16 @@ export const menuData = {
             title: "ቢራ",
             categoryImage: "/images/header_beer_bottled.png",
             items: [
-                { name: "ቅዱስ ጊዮርጊስ ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "ሐበሻ ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "ዳሸን ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "ሐረር ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "በደሌ ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "ሄኒከን ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "አራዳ ቢራ", price: "115.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "አልኮል አልባ ቢራ", price: "100.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
-                { name: "ድራፍት", price: "100.00", image: "/images/photo_5915545284299656337_y.jpg", description: "" }
+                { name: "ቅዱስ ጊዮርጊስ ቢራ", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ሐበሻ ቢራ", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ዳሸን ቢራ", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ሐረር ቢራ", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "በደሌ ቢራ", price: "120.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ሄኒከን ቢራ", price: "120.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "አራዳ ቢራ", price: "120.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "አልኮል ነጻ ቢራ", price: "110.00", image: "/images/photo_5884088003225914779_x.jpg", description: "" },
+                { name: "ድራፍት ጃምቦ", price: "75.00", image: "/images/photo_5915545284299656337_y.jpg", description: "" },
+                { name: "ሲንግል ጃምቦ", price: "70.00", image: "/images/photo_5915545284299656337_y.jpg", description: "" }
             ]
         },
         {
@@ -484,6 +482,8 @@ export const menuData = {
             categoryImage: "/images/header_whisky.png",
             items: [
                 { name: "ጆኒ ዎከር ሬድ ሌብል", image: "/images/photo_5884088003225914804_x.jpg", description: "" },
+                { name: "ጆኒ ዎከር ብላክ ሌብል", image: "/images/photo_5884088003225914805_x.jpg", description: "" },
+                { name: "ጃክ ዳንኤል", image: "/images/photo_5884088003225914806_x.jpg", description: "" },
                 { name: "ቺቫስ ሪጋል", image: "/images/photo_5884088003225914808_x.jpg", description: "" }
             ]
         },

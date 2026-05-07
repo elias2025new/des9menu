@@ -1,69 +1,65 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Header from './components/Header';
-import ImportantInfo from './components/ImportantInfo';
 import CategoryNav from './components/CategoryNav';
 import FoodCard from './components/FoodCard';
 import FoodModal from './components/FoodModal';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import { menuData } from './data/menuData';
+import AdminDashboard from './components/AdminDashboard';
+import { fetchMenuFromDB, getDefaultMenuData } from './data/menuStore';
 
-function App() {
+// ─── Main Menu Page ────────────────────────────────────────────────────────────
+function MenuPage() {
   const [language, setLanguage] = useState('am');
-  // Get the current menu data based on the selected language
-  const currentMenuData = menuData[language];
-  const [activeCategory, setActiveCategory] = useState(currentMenuData[0].id);
+  const [allMenuData, setAllMenuData] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
 
-  // Force scroll to top on refresh and handle image preloading
+  // Load from Neon DB, fall back to static default
   useEffect(() => {
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
+    fetchMenuFromDB().then(data => {
+      const menu = data || getDefaultMenuData();
+      setAllMenuData(menu);
+      setActiveCategory(menu[language]?.[0]?.id || '');
+    });
+  }, []);
+
+  useEffect(() => {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
     window.scrollTo(0, 0);
   }, []);
 
   const handleCategoryClick = React.useCallback((id) => {
     setActiveCategory(id);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, []);
 
-
-  // Update active category on scroll (Throttled & Efficient)
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '-40% 0px -50% 0px', // Trigger when section is in middle of screen
-      threshold: 0
-    };
-
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveCategory(entry.target.id);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Watch all menu sections
-    currentMenuData.forEach((category) => {
-      const element = document.getElementById(category.id);
-      if (element) observer.observe(element);
+    if (!allMenuData) return;
+    const currentMenuData = allMenuData[language] || [];
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) setActiveCategory(e.target.id); }),
+      { root: null, rootMargin: '-40% 0px -50% 0px', threshold: 0 }
+    );
+    currentMenuData.forEach(cat => {
+      const el = document.getElementById(cat.id);
+      if (el) obs.observe(el);
     });
+    return () => obs.disconnect();
+  }, [allMenuData, language]);
 
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  if (!allMenuData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  const currentMenuData = allMenuData[language] || [];
 
   return (
     <>
@@ -75,11 +71,9 @@ function App() {
           currentLang={language}
           onLanguageChange={setLanguage}
         />
-
         <div className="pt-48">
           <Header currentLang={language} />
         </div>
-
         <main className="px-5 pt-4 pb-0 flex-grow">
           {currentMenuData.map((category, index) => (
             <section key={category.id} id={category.id} className="mb-6 text-center scroll-mt-52">
@@ -91,35 +85,32 @@ function App() {
                   {category.description}
                 </p>
               )}
-
               <div className="grid grid-cols-1 gap-2.5 text-left">
-                {category.items.map((item, itemIndex) => (
-                  <FoodCard
-                    key={`${category.id}-${itemIndex}`}
-                    item={item}
-                    onClick={setSelectedItem}
-                  />
+                {category.items.map((item, i) => (
+                  <FoodCard key={`${category.id}-${i}`} item={item} onClick={setSelectedItem} />
                 ))}
               </div>
-
-              {/* Divider Line between sections, hide for last item */}
               {index < currentMenuData.length - 1 && (
-                <div className="mt-8 mb-5 border-b-2 border-slate-100 opacity-60 rounded-full mx-4"></div>
+                <div className="mt-8 mb-5 border-b-2 border-slate-100 opacity-60 rounded-full mx-4" />
               )}
             </section>
           ))}
         </main>
-
         <Footer currentLang={language} />
-
-        <FoodModal
-          item={selectedItem}
-          onClose={() => setSelectedItem(null)}
-        />
-
+        <FoodModal item={selectedItem} onClose={() => setSelectedItem(null)} />
         <ScrollToTop />
       </Layout>
     </>
+  );
+}
+
+// ─── Root with routing ─────────────────────────────────────────────────────────
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<MenuPage />} />
+      <Route path="/Admin" element={<AdminDashboard />} />
+    </Routes>
   );
 }
 
