@@ -380,10 +380,10 @@ export default function AdminDashboard() {
                                                         ${dirty ? 'border-emerald-500 text-emerald-300' : 'border-white/10 text-white focus:border-emerald-500/60'}`} />
                                                 {dirty && <span className="absolute -top-1.5 -right-1.5 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-[#161a23]" />}
                                             </div>
-                                            <button onClick={() => setDeleteTarget({ catId: activeCat.id, idx, name: item.name })}
-                                                className="text-slate-700 hover:text-red-400 transition-colors p-1 opacity-0 group-hover:opacity-100 justify-self-center">
-                                                <Trash2 size={13} />
-                                            </button>
+                                             <button onClick={() => setDeleteTarget({ catId: activeCat.id, idx, name: item.name })}
+                                                 className="text-slate-500 hover:text-red-400 transition-colors p-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 justify-self-center">
+                                                 <Trash2 size={13} />
+                                             </button>
                                         </div>
                                     );
                                 })}

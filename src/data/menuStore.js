@@ -76,11 +76,70 @@ export function updateItemPriceLocal(menuObj, categoryId, itemIndex, newPrice) {
     return data;
 }
 
+
+const TRANSLATIONS = {
+    'shiro': 'ሽሮ',
+    'tibs': 'ጥብስ',
+    'kitfo': 'ክትፎ',
+    'beyaynetu': 'በያይነቱ',
+    'ful': 'ፉል',
+    'chechebsa': 'ጨጨብሳ',
+    'kinche': 'ቂንጨ',
+    'dulet': 'ዱለት',
+    'doro': 'ዶሮ',
+    'beer': 'ቢራ',
+    'coffee': 'ቡና',
+    'tea': 'ሻይ',
+    'water': 'ውሃ',
+    'pizza': 'ፒዛ',
+    'burger': 'በርገር',
+    'fish': 'ዓሣ',
+    'asla': 'አሳ',
+    'asa': 'አሳ',
+    'special': 'ልዩ',
+    'juice': 'ጁስ',
+    'honey': 'ማር',
+    'egg': 'እንቁላል',
+    'meat': 'ስጋ',
+    'bread': 'ዳቦ',
+    'rice': 'ሩዝ',
+    'salad': 'ሰላጣ',
+    'wine': 'ወይን',
+    'soft drink': 'ለስላሳ መጠጥ',
+    'takeaway': 'ፓርሰል',
+    'package': 'ፓኬጅ',
+    'extra': 'ተጨማሪ',
+};
+
+function smartTranslate(text) {
+    if (!text) return '';
+    const lower = text.toLowerCase().trim();
+    // Check direct match
+    if (TRANSLATIONS[lower]) return TRANSLATIONS[lower];
+    
+    // Check if it contains keywords
+    for (const [en, am] of Object.entries(TRANSLATIONS)) {
+        if (lower.includes(en)) {
+            // Very simple replacement
+            return lower.replace(en, am);
+        }
+    }
+    return text; // Fallback to original
+}
+
 export function addItemToCategoryLocal(menuObj, categoryId, newItem) {
     const data = JSON.parse(JSON.stringify(menuObj));
     ['en', 'am'].forEach((lang) => {
         const cat = data[lang]?.find((c) => c.id === categoryId);
-        if (cat) cat.items.push({ ...newItem });
+        if (cat) {
+            const itemToAdd = { ...newItem };
+            if (lang === 'am') {
+                // Apply smart translation for Amharic name if it looks like English
+                itemToAdd.name = smartTranslate(newItem.name);
+                itemToAdd.description = smartTranslate(newItem.description);
+            }
+            cat.items.push(itemToAdd);
+        }
     });
     return data;
 }
