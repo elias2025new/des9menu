@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LogOut, Plus, Save, RefreshCw, Trash2, X, Check, AlertTriangle, ShieldCheck, ChevronRight, UtensilsCrossed, Database, Loader, Image } from 'lucide-react';
-import { fetchMenuFromDB, saveMenuToDB, getDefaultMenuData, setAdminPassword, getAdminPassword, clearAdminPassword, updateItemPriceLocal, addItemToCategoryLocal, deleteItemLocal } from '../data/menuStore';
+import { LogOut, Plus, Save, RefreshCw, Trash2, X, Check, AlertTriangle, ShieldCheck, ChevronRight, UtensilsCrossed, Database, Loader, Image, Pencil } from 'lucide-react';
+import { fetchMenuFromDB, saveMenuToDB, getDefaultMenuData, setAdminPassword, getAdminPassword, clearAdminPassword, updateItemPriceLocal, addItemToCategoryLocal, deleteItemLocal, updateItemDetailsLocal, smartTranslate } from '../data/menuStore';
 
 const LABEL = 'block text-slate-400 text-[11px] font-semibold uppercase tracking-widest mb-1.5';
 const INPUT = 'w-full bg-[#0d0f14] text-white border border-white/10 focus:border-emerald-500 rounded-xl px-4 py-2.5 text-sm outline-none transition-colors placeholder-slate-600';
@@ -40,10 +40,17 @@ function ConfirmDialog({ icon: Icon, iconColor, title, message, onConfirm, onCan
 function AddItemModal({ categories, defaultCatId, onAdd, onClose }) {
     const [catId, setCatId] = useState(defaultCatId || categories[0]?.id);
     const [name, setName] = useState('');
+    const [amName, setAmName] = useState('');
     const [price, setPrice] = useState('');
     const [desc, setDesc] = useState('');
+    const [amDesc, setAmDesc] = useState('');
     const [img, setImg] = useState('/images/des9-logo.jpg');
     const [uploading, setUploading] = useState(false);
+
+    const handleAutoTranslate = () => {
+        if (!amName) setAmName(smartTranslate(name));
+        if (!amDesc) setAmDesc(smartTranslate(desc));
+    };
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
@@ -71,14 +78,31 @@ function AddItemModal({ categories, defaultCatId, onAdd, onClose }) {
                             {categories.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                         </select>
                     </div>
-                    <div><label className={LABEL}>Name <span className="text-red-400">*</span></label>
-                        <input value={name} onChange={e => setName(e.target.value)} placeholder="e.g. Special Tibs" className={INPUT} />
+                    <div className="grid grid-cols-2 gap-4">
+                        <div><label className={LABEL}>Name (EN) <span className="text-red-400">*</span></label>
+                            <input value={name} onChange={e => setName(e.target.value)} placeholder="Special Tibs" className={INPUT} />
+                        </div>
+                        <div><label className={LABEL}>Name (AM)</label>
+                            <input value={amName} onChange={e => setAmName(e.target.value)} placeholder="የበግ ጥብስ" className={INPUT} />
+                        </div>
                     </div>
-                    <div><label className={LABEL}>Price (ETB)</label>
-                        <input value={price} onChange={e => setPrice(e.target.value)} placeholder="e.g. 450.00" type="number" min="0" step="0.01" className={INPUT} />
+                    <div className="grid grid-cols-2 gap-4">
+                        <div><label className={LABEL}>Price (ETB)</label>
+                            <input value={price} onChange={e => setPrice(e.target.value)} placeholder="450.00" type="number" min="0" step="0.01" className={INPUT} />
+                        </div>
+                        <div className="flex items-end">
+                            <button onClick={handleAutoTranslate} className="w-full bg-blue-600/10 hover:bg-blue-600/20 text-blue-400 text-[10px] font-bold py-3 rounded-xl border border-blue-500/20 transition-all">
+                                ✨ Auto-fill Amharic
+                            </button>
+                        </div>
                     </div>
-                    <div><label className={LABEL}>Description</label>
-                        <input value={desc} onChange={e => setDesc(e.target.value)} placeholder="Short description…" className={INPUT} />
+                    <div className="grid grid-cols-2 gap-4">
+                        <div><label className={LABEL}>Desc (EN)</label>
+                            <input value={desc} onChange={e => setDesc(e.target.value)} placeholder="Tender beef..." className={INPUT} />
+                        </div>
+                        <div><label className={LABEL}>Desc (AM)</label>
+                            <input value={amDesc} onChange={e => setAmDesc(e.target.value)} placeholder="ለስላሳ ስጋ..." className={INPUT} />
+                        </div>
                     </div>
                     <div><label className={LABEL}>Image</label>
                         <div className="flex items-center gap-3">
@@ -98,9 +122,104 @@ function AddItemModal({ categories, defaultCatId, onAdd, onClose }) {
                 </div>
                 <div className="p-5 pt-0 flex gap-3">
                     <button onClick={onClose} className="flex-1 bg-white/5 hover:bg-white/10 text-slate-300 font-semibold py-2.5 rounded-xl text-sm">Cancel</button>
-                    <button disabled={!name.trim()} onClick={() => onAdd(catId, { name: name.trim(), price, description: desc, image: img || '/images/des9-logo.jpg' })}
+                    <button disabled={!name.trim()} onClick={() => onAdd(catId, { 
+                            price, 
+                            image: img || '/images/des9-logo.jpg',
+                            en: { name: name.trim(), description: desc },
+                            am: { name: amName.trim() || smartTranslate(name), description: amDesc.trim() || smartTranslate(desc) }
+                        })}
                         className="flex-1 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 text-white font-bold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2">
                         <Plus size={14} />Add Item
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+// ── Edit Item Modal ──────────────────────────────────────────────────────────
+function EditItemModal({ item, categoryId, itemIndex, onSave, onClose }) {
+    const [name, setName] = useState(item.en?.name || item.name || '');
+    const [amName, setAmName] = useState(item.am?.name || item.name || '');
+    const [price, setPrice] = useState(item.price || '');
+    const [desc, setDesc] = useState(item.en?.description || item.description || '');
+    const [amDesc, setAmDesc] = useState(item.am?.description || item.description || '');
+    const [img, setImg] = useState(item.image || '/images/des9-logo.jpg');
+    const [uploading, setUploading] = useState(false);
+
+    const handleAutoTranslate = () => {
+        if (!amName) setAmName(smartTranslate(name));
+        if (!amDesc) setAmDesc(smartTranslate(desc));
+    };
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        setUploading(true);
+        const reader = new FileReader();
+        reader.onloadend = () => { setImg(reader.result); setUploading(false); };
+        reader.readAsDataURL(file);
+    };
+
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+            <div className="bg-[#161a23] border border-white/10 rounded-2xl w-full max-w-md shadow-2xl overflow-hidden">
+                <div className="flex items-center justify-between p-5 border-b border-white/8">
+                    <h3 className="text-white font-bold text-base flex items-center gap-2"><Pencil size={16} className="text-blue-400" />Edit Item</h3>
+                    <button onClick={onClose} className="text-slate-500 hover:text-white"><X size={18} /></button>
+                </div>
+                <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto custom-scrollbar">
+                    <div className="grid grid-cols-2 gap-4">
+                        <div><label className={LABEL}>Name (EN)</label>
+                            <input value={name} onChange={e => setName(e.target.value)} className={INPUT} />
+                        </div>
+                        <div><label className={LABEL}>Name (AM)</label>
+                            <input value={amName} onChange={e => setAmName(e.target.value)} className={INPUT} />
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                        <div><label className={LABEL}>Price (ETB)</label>
+                            <input value={price} onChange={e => setPrice(e.target.value)} type="number" className={INPUT} />
+                        </div>
+                        <div className="flex items-end">
+                            <button onClick={handleAutoTranslate} className="w-full bg-blue-600/10 hover:bg-blue-600/20 text-blue-400 text-[10px] font-bold py-3 rounded-xl border border-blue-500/20 transition-all">
+                                ✨ Auto-fill Amharic
+                            </button>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                        <div><label className={LABEL}>Desc (EN)</label>
+                            <input value={desc} onChange={e => setDesc(e.target.value)} className={INPUT} />
+                        </div>
+                        <div><label className={LABEL}>Desc (AM)</label>
+                            <input value={amDesc} onChange={e => setAmDesc(e.target.value)} className={INPUT} />
+                        </div>
+                    </div>
+                    <div><label className={LABEL}>Image</label>
+                        <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex-shrink-0 overflow-hidden">
+                                <img src={img} alt="Preview" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="flex-1 relative">
+                                <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" id="edit-image-upload" />
+                                <label htmlFor="edit-image-upload" className="w-full bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-slate-400 cursor-pointer flex items-center gap-2 transition-colors">
+                                    {uploading ? <Loader size={12} className="animate-spin" /> : <Image size={12} />}
+                                    {uploading ? 'Processing...' : 'Upload New Image'}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="p-5 flex gap-3 border-t border-white/8 bg-white/3">
+                    <button onClick={onClose} className="flex-1 bg-white/5 hover:bg-white/10 text-slate-300 font-semibold py-2.5 rounded-xl text-sm">Cancel</button>
+                    <button onClick={() => onSave(categoryId, itemIndex, {
+                        en: { name, description: desc },
+                        am: { name: amName, description: amDesc },
+                        price,
+                        image: img
+                    })}
+                        className="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2">
+                        <Check size={14} />Apply Changes
                     </button>
                 </div>
             </div>
@@ -175,6 +294,7 @@ export default function AdminDashboard() {
     const [showAdd, setShowAdd] = useState(false);
     const [toast, setToast] = useState(null);
     const [deleteTarget, setDeleteTarget] = useState(null);
+    const [editTarget, setEditTarget] = useState(null);
     const [showReset, setShowReset] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -233,7 +353,14 @@ export default function AdminDashboard() {
         const updated = addItemToCategoryLocal(menuData, catId, item);
         setShowAdd(false);
         setActiveCatId(catId);
-        saveToDb(updated, `"${item.name}" added!`);
+        const nameToUse = item.en?.name || item.name || 'New Item';
+        saveToDb(updated, `"${nameToUse}" added!`);
+    };
+
+    const handleUpdateItem = (catId, idx, updates) => {
+        const updated = updateItemDetailsLocal(menuData, catId, idx, 'en', updates);
+        setEditTarget(null);
+        saveToDb(updated, `Item details updated!`);
     };
 
     const handleDeleteConfirm = () => {
@@ -380,10 +507,16 @@ export default function AdminDashboard() {
                                                         ${dirty ? 'border-emerald-500 text-emerald-300' : 'border-white/10 text-white focus:border-emerald-500/60'}`} />
                                                 {dirty && <span className="absolute -top-1.5 -right-1.5 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-[#161a23]" />}
                                             </div>
-                                             <button onClick={() => setDeleteTarget({ catId: activeCat.id, idx, name: item.name })}
-                                                 className="text-slate-500 hover:text-red-400 transition-colors p-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 justify-self-center">
-                                                 <Trash2 size={13} />
-                                             </button>
+                                             <div className="flex items-center gap-1 justify-self-center">
+                                                <button onClick={() => setEditTarget({ catId: activeCat.id, idx, item })}
+                                                    className="text-slate-500 hover:text-blue-400 transition-colors p-1.5 opacity-100 md:opacity-0 md:group-hover:opacity-100">
+                                                    <Pencil size={13} />
+                                                </button>
+                                                <button onClick={() => setDeleteTarget({ catId: activeCat.id, idx, name: item.name })}
+                                                    className="text-slate-500 hover:text-red-400 transition-colors p-1.5 opacity-100 md:opacity-0 md:group-hover:opacity-100">
+                                                    <Trash2 size={13} />
+                                                </button>
+                                             </div>
                                         </div>
                                     );
                                 })}
@@ -403,6 +536,7 @@ export default function AdminDashboard() {
 
             {/* Modals */}
             {showAdd && <AddItemModal categories={categories} defaultCatId={activeCatId} onAdd={handleAddItem} onClose={() => setShowAdd(false)} />}
+            {editTarget && <EditItemModal categoryId={editTarget.catId} itemIndex={editTarget.idx} item={editTarget.item} onSave={handleUpdateItem} onClose={() => setEditTarget(null)} />}
 
             {deleteTarget && (
                 <ConfirmDialog icon={Trash2} iconColor="bg-red-500/15 text-red-400"

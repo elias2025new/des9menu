@@ -127,20 +127,49 @@ function smartTranslate(text) {
     return text; // Fallback to original
 }
 
+
+/** 
+ * Adds a new item with potential manual overrides for each language.
+ * newItem: { price, image, en: {name, description}, am: {name, description} }
+ */
 export function addItemToCategoryLocal(menuObj, categoryId, newItem) {
     const data = JSON.parse(JSON.stringify(menuObj));
     ['en', 'am'].forEach((lang) => {
         const cat = data[lang]?.find((c) => c.id === categoryId);
         if (cat) {
-            const itemToAdd = { ...newItem };
-            if (lang === 'am') {
-                // Apply smart translation for Amharic name if it looks like English
-                itemToAdd.name = smartTranslate(newItem.name);
-                itemToAdd.description = smartTranslate(newItem.description);
-            }
-            cat.items.push(itemToAdd);
+            const langData = newItem[lang] || {};
+            cat.items.push({
+                name: langData.name || '',
+                price: newItem.price,
+                description: langData.description || '',
+                image: newItem.image
+            });
         }
     });
+    return data;
+}
+
+/** 
+ * Updates any field of an item (name, price, etc.) across both languages.
+ * updateObj: { name, description, price, image } — fields to update for the current lang
+ */
+export function updateItemDetailsLocal(menuObj, categoryId, itemIndex, lang, updateObj) {
+    const data = JSON.parse(JSON.stringify(menuObj));
+    
+    // 1. Update the specific language version with exactly what was provided
+    const targetCat = data[lang]?.find(c => c.id === categoryId);
+    if (targetCat && targetCat.items[itemIndex]) {
+        targetCat.items[itemIndex] = { ...targetCat.items[itemIndex], ...updateObj };
+    }
+
+    // 2. Sync cross-language fields (price and image) to the other language
+    const otherLang = lang === 'en' ? 'am' : 'en';
+    const otherCat = data[otherLang]?.find(c => c.id === categoryId);
+    if (otherCat && otherCat.items[itemIndex]) {
+        if (updateObj.price !== undefined) otherCat.items[itemIndex].price = updateObj.price;
+        if (updateObj.image !== undefined) otherCat.items[itemIndex].image = updateObj.image;
+    }
+
     return data;
 }
 
