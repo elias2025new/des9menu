@@ -5,6 +5,13 @@ import { fetchMenuFromDB, saveMenuToDB, getDefaultMenuData, setAdminPassword, ge
 
 const LABEL = 'block text-slate-400 text-[11px] font-semibold uppercase tracking-widest mb-1.5';
 const INPUT = 'w-full bg-[#0d0f14] text-white border border-white/10 focus:border-emerald-500 rounded-xl px-4 py-2.5 text-sm outline-none transition-colors placeholder-slate-600';
+const pk = (catId, idx) => `${catId}||${idx}`;
+
+const formatPrice = (p) => {
+    if (!p && p !== 0) return '';
+    const num = parseFloat(p);
+    return isNaN(num) ? '' : num.toFixed(2);
+};
 
 // ── Toast ────────────────────────────────────────────────────────────────────
 function Toast({ toast }) {
@@ -123,7 +130,7 @@ function AddItemModal({ categories, defaultCatId, onAdd, onClose }) {
                 <div className="p-5 pt-0 flex gap-3">
                     <button onClick={onClose} className="flex-1 bg-white/5 hover:bg-white/10 text-slate-300 font-semibold py-2.5 rounded-xl text-sm">Cancel</button>
                     <button disabled={!name.trim()} onClick={() => onAdd(catId, { 
-                            price, 
+                            price: formatPrice(price), 
                             image: img || '/images/des9-logo.jpg',
                             en: { name: name.trim(), description: desc },
                             am: { name: amName.trim() || smartTranslate(name), description: amDesc.trim() || smartTranslate(desc) }
@@ -215,7 +222,7 @@ function EditItemModal({ item, categoryId, itemIndex, onSave, onClose }) {
                     <button onClick={() => onSave(categoryId, itemIndex, {
                         en: { name, description: desc },
                         am: { name: amName, description: amDesc },
-                        price,
+                        price: formatPrice(price),
                         image: img
                     })}
                         className="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2">
@@ -344,7 +351,7 @@ export default function AdminDashboard() {
             const sep = key.indexOf('||');
             const catId = key.slice(0, sep);
             const idx = parseInt(key.slice(sep + 2));
-            updated = updateItemPriceLocal(updated, catId, idx, price);
+            updated = updateItemPriceLocal(updated, catId, idx, formatPrice(price));
         });
         saveToDb(updated, `Saved ${Object.keys(prices).length} price change(s)!`);
     };
@@ -502,6 +509,10 @@ export default function AdminDashboard() {
                                             <div className="relative">
                                                 <input type="number" min="0" step="0.01" value={val}
                                                     onChange={e => setPrices(p => ({ ...p, [key]: e.target.value }))}
+                                                    onBlur={e => {
+                                                        const formatted = formatPrice(e.target.value);
+                                                        if (formatted !== e.target.value) setPrices(p => ({ ...p, [key]: formatted }));
+                                                    }}
                                                     placeholder="— no price —"
                                                     className={`w-full bg-[#0d0f14] text-sm font-bold border rounded-lg px-3 py-2 outline-none transition-colors
                                                         ${dirty ? 'border-emerald-500 text-emerald-300' : 'border-white/10 text-white focus:border-emerald-500/60'}`} />
@@ -553,6 +564,16 @@ export default function AdminDashboard() {
             )}
 
             <Toast toast={toast} />
+
+            {/* Global Saving Loader */}
+            {saving && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-[2px]">
+                    <div className="bg-[#161a23] border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col items-center gap-4">
+                        <Loader size={32} className="text-emerald-500 animate-spin" />
+                        <p className="text-white font-bold text-sm">Saving changes...</p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
