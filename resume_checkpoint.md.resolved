@@ -1,0 +1,84 @@
+# DES9 Admin Dashboard — Resume Checkpoint
+
+## ✅ What's Already Done (Code Side)
+
+All code is written and ready. You just need to do the Neon + Vercel setup steps below.
+
+| File | Status |
+|------|--------|
+| `api/menu.js` | ✅ Created — reads menu from Neon DB |
+| `api/admin.js` | ✅ Created — saves menu to Neon DB (password protected) |
+| `src/data/menuStore.js` | ✅ Updated — calls the API |
+| `src/components/AdminDashboard.jsx` | ✅ Updated — full UI with DB support |
+| `src/App.jsx` | ✅ Updated — routes `/` and `/Admin`, fetches from API |
+| `src/main.jsx` | ✅ Updated — BrowserRouter added |
+| `vercel.json` | ✅ Updated — API routes pass through correctly |
+| `@neondatabase/serverless` | ✅ Installed |
+| `react-router-dom` | ✅ Installed |
+
+---
+
+## 📋 What You Need To Do Next (In Order)
+
+### STEP 1 — Create Neon Database
+1. Go to **https://neon.tech** → Sign up / Log in
+2. Click **New Project**
+3. Name: `des9-menu`, Region: closest to Ethiopia (e.g. `eu-central-1`)
+4. Click **Create Project**
+
+### STEP 2 — Create the Table
+1. In Neon dashboard → click **SQL Editor** (left sidebar)
+2. Paste and run:
+```sql
+CREATE TABLE IF NOT EXISTS menu_config (
+  id         SERIAL PRIMARY KEY,
+  data       JSONB NOT NULL,
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+INSERT INTO menu_config (data) VALUES ('{}');
+```
+
+### STEP 3 — Copy Your Connection String
+1. In Neon dashboard → **Connection Details** (top right)
+2. Copy the full string — looks like:
+   `postgresql://des9_owner:PASSWORD@ep-xxx.neon.tech/des9?sslmode=require`
+3. **Save it somewhere safe**
+
+### STEP 4 — Add to Vercel
+1. Go to **https://vercel.com** → your DES9 project
+2. **Settings → Environment Variables** → Add:
+   - `DATABASE_URL` = your Neon connection string
+   - `ADMIN_PASSWORD` = a password you choose (e.g. `Des9@2025!`)
+3. Set both for **All Environments** → Save
+
+### STEP 5 — Create `.env.local` (for local testing)
+Create a file called `.env.local` in the root of the project:
+```
+DATABASE_URL=postgresql://des9_owner:PASSWORD@ep-xxx.neon.tech/des9?sslmode=require
+ADMIN_PASSWORD=Des9@2025!
+```
+> This file is already gitignored — safe to create.
+
+### STEP 6 — Deploy
+```bash
+git add .
+git commit -m "feat: neon db + admin dashboard"
+git push
+```
+
+### STEP 7 — First Time Login
+1. Go to `yoursite.vercel.app/Admin`
+2. Enter your `ADMIN_PASSWORD`
+3. Click the **"Initialize DB"** button in the top bar
+4. This seeds the full menu into Neon — done!
+
+---
+
+## 🔑 Admin Dashboard Password
+- Set it yourself in STEP 4 as `ADMIN_PASSWORD`
+- Login URL: `yoursite.com/Admin`
+
+## ⚠️ Notes
+- Changes made in the admin save to Neon and immediately show on the live menu
+- Both English and Amharic versions are updated when you change a price
+- "Reset All" in the sidebar restores original default prices

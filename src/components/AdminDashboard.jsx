@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LogOut, Plus, Save, RefreshCw, Trash2, X, Check, AlertTriangle, ShieldCheck, ChevronRight, UtensilsCrossed, Database, Loader } from 'lucide-react';
+import { LogOut, Plus, Save, RefreshCw, Trash2, X, Check, AlertTriangle, ShieldCheck, ChevronRight, UtensilsCrossed, Database, Loader, Image } from 'lucide-react';
 import { fetchMenuFromDB, saveMenuToDB, getDefaultMenuData, setAdminPassword, getAdminPassword, clearAdminPassword, updateItemPriceLocal, addItemToCategoryLocal, deleteItemLocal } from '../data/menuStore';
 
 const LABEL = 'block text-slate-400 text-[11px] font-semibold uppercase tracking-widest mb-1.5';
@@ -43,6 +43,20 @@ function AddItemModal({ categories, defaultCatId, onAdd, onClose }) {
     const [price, setPrice] = useState('');
     const [desc, setDesc] = useState('');
     const [img, setImg] = useState('/images/des9-logo.jpg');
+    const [uploading, setUploading] = useState(false);
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        setUploading(true);
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setImg(reader.result);
+            setUploading(false);
+        };
+        reader.readAsDataURL(file);
+    };
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
@@ -66,8 +80,20 @@ function AddItemModal({ categories, defaultCatId, onAdd, onClose }) {
                     <div><label className={LABEL}>Description</label>
                         <input value={desc} onChange={e => setDesc(e.target.value)} placeholder="Short description…" className={INPUT} />
                     </div>
-                    <div><label className={LABEL}>Image Path</label>
-                        <input value={img} onChange={e => setImg(e.target.value)} placeholder="/images/filename.jpg" className={INPUT + ' font-mono text-xs'} />
+                    <div><label className={LABEL}>Image</label>
+                        <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex-shrink-0 overflow-hidden">
+                                <img src={img} alt="Preview" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="flex-1 relative">
+                                <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" id="item-image-upload" />
+                                <label htmlFor="item-image-upload" className="w-full bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-slate-400 cursor-pointer flex items-center gap-2 transition-colors">
+                                    {uploading ? <Loader size={12} className="animate-spin" /> : <Image size={12} />}
+                                    {uploading ? 'Processing...' : 'Upload Image'}
+                                </label>
+                            </div>
+                        </div>
+                        <input value={img} onChange={e => setImg(e.target.value)} placeholder="Or paste image URL..." className={INPUT + ' mt-2 font-mono text-[10px] opacity-50'} />
                     </div>
                 </div>
                 <div className="p-5 pt-0 flex gap-3">
@@ -243,7 +269,9 @@ export default function AdminDashboard() {
             {/* Top Bar */}
             <header className="bg-[#161a23] border-b border-white/8 px-4 md:px-6 py-3 flex items-center justify-between sticky top-0 z-40 shadow-lg">
                 <div className="flex items-center gap-3">
-                    <button onClick={() => setSidebarOpen(o => !o)} className="md:hidden text-slate-400 hover:text-white p-1">☰</button>
+                    <button onClick={() => setSidebarOpen(o => !o)} className="md:hidden text-slate-400 hover:text-white p-2">
+                        <UtensilsCrossed size={20} />
+                    </button>
                     <div className="w-8 h-8 rounded-lg overflow-hidden"><img src="/images/des9-logo.jpg" alt="DES9" className="w-full h-full object-cover" /></div>
                     <div><span className="font-black text-sm text-white">DES9</span><span className="text-emerald-400 font-bold text-sm ml-1">Admin</span></div>
                 </div>
@@ -256,9 +284,9 @@ export default function AdminDashboard() {
                     )}
                     {dirtyCount > 0 && (
                         <button onClick={handleSaveAll} disabled={saving}
-                            className="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-3 py-2 rounded-lg transition-colors">
+                            className="flex items-center gap-1 bg-emerald-600 hover:bg-emerald-500 text-white text-[10px] md:text-xs font-bold px-2 md:px-3 py-1.5 md:py-2 rounded-lg transition-colors">
                             {saving ? <Loader size={12} className="animate-spin" /> : <Save size={12} />}
-                            Save ({dirtyCount})
+                            <span className="hidden sm:inline">Save</span> ({dirtyCount})
                         </button>
                     )}
                     <button onClick={() => setShowAdd(true)}
