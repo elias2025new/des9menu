@@ -475,7 +475,7 @@ export default function AdminDashboard() {
                             </div>
 
                             <div className="bg-[#161a23] border border-white/8 rounded-2xl overflow-hidden shadow-xl">
-                                <div className="grid grid-cols-[1fr_140px_36px] md:grid-cols-[48px_1fr_200px_36px] px-4 py-2.5 border-b border-white/8 bg-white/3">
+                                <div className="grid grid-cols-[1fr_110px_70px] md:grid-cols-[48px_1fr_160px_80px] px-4 py-2.5 border-b border-white/8 bg-white/3">
                                     <span className="hidden md:block text-slate-600 text-[10px] font-bold uppercase tracking-widest">#</span>
                                     <span className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Item</span>
                                     <span className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Price (ETB)</span>
@@ -493,7 +493,7 @@ export default function AdminDashboard() {
                                     const val = prices[key] !== undefined ? prices[key] : (item.price || '');
                                     const dirty = prices[key] !== undefined && prices[key] !== (item.price || '');
                                     return (
-                                        <div key={idx} className="grid grid-cols-[1fr_140px_36px] md:grid-cols-[48px_1fr_200px_36px] items-center px-4 py-3 border-b border-white/5 last:border-0 hover:bg-white/3 group">
+                                        <div key={idx} className="grid grid-cols-[1fr_110px_70px] md:grid-cols-[48px_1fr_160px_80px] items-center px-4 py-3 border-b border-white/5 last:border-0 hover:bg-white/3 group">
                                             <span className="hidden md:block text-slate-600 text-xs font-mono">{String(idx + 1).padStart(2, '0')}</span>
                                             <div className="min-w-0 pr-2">
                                                 <p className="text-white text-sm font-semibold truncate">{item.name}</p>
