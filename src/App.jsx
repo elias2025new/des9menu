@@ -8,6 +8,7 @@ import FoodModal from './components/FoodModal';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import AdminDashboard from './components/AdminDashboard';
+import ErrorPage from './components/ErrorPage';
 import { fetchMenuFromDB, getDefaultMenuData } from './data/menuStore';
 
 // ─── Main Menu Page ────────────────────────────────────────────────────────────
@@ -57,6 +58,11 @@ function MenuPage() {
         <div className="w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin" />
       </div>
     );
+  }
+
+  // Check for Redirect/Maintenance Mode
+  if (allMenuData.isRedirectEnabled) {
+    return <ErrorPage />;
   }
 
   const currentMenuData = allMenuData[language] || [];

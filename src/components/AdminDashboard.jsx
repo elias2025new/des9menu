@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LogOut, Plus, Save, RefreshCw, Trash2, X, Check, AlertTriangle, ShieldCheck, ChevronRight, UtensilsCrossed, Database, Loader, Image, Pencil } from 'lucide-react';
+import { LogOut, Plus, Save, RefreshCw, Trash2, X, Check, AlertTriangle, ShieldCheck, ChevronRight, UtensilsCrossed, Database, Loader, Image, Pencil, Eye, EyeOff } from 'lucide-react';
 import { fetchMenuFromDB, saveMenuToDB, getDefaultMenuData, setAdminPassword, getAdminPassword, clearAdminPassword, updateItemPriceLocal, addItemToCategoryLocal, deleteItemLocal, updateItemDetailsLocal, smartTranslate } from '../data/menuStore';
 
 const LABEL = 'block text-slate-400 text-[11px] font-semibold uppercase tracking-widest mb-1.5';
@@ -384,6 +384,12 @@ export default function AdminDashboard() {
         saveToDb(getDefaultMenuData(), 'Menu reset to original defaults.');
     };
 
+    const handleToggleRedirect = async () => {
+        const newState = !menuData.isRedirectEnabled;
+        const updated = { ...menuData, isRedirectEnabled: newState };
+        await saveToDb(updated, newState ? 'Main page hidden (404 mode active)' : 'Main page is now LIVE', 'Updating site status...');
+    };
+
     const handleLogout = () => { clearAdminPassword(); navigate('/'); };
 
     if (!authed) return <LoginScreen onLogin={() => setAuthed(true)} />;
@@ -409,7 +415,27 @@ export default function AdminDashboard() {
                         <UtensilsCrossed size={20} />
                     </button>
                     <div className="w-8 h-8 rounded-lg overflow-hidden"><img src="/images/des9-logo.jpg" alt="DES9" className="w-full h-full object-cover" /></div>
-                    <div><span className="font-black text-sm text-white">DES9</span><span className="text-emerald-400 font-bold text-sm ml-1">Admin</span></div>
+                    <div className="hidden sm:block"><span className="font-black text-sm text-white">DES9</span><span className="text-emerald-400 font-bold text-sm ml-1">Admin</span></div>
+                    
+                    {/* Site Visibility Toggle */}
+                    <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-2.5 py-1.5 ml-1 md:ml-4">
+                        <div className="flex-col hidden sm:flex">
+                            <span className="text-[8px] font-bold text-slate-500 uppercase tracking-wider leading-none mb-0.5">Visibility</span>
+                            <span className={`text-[9px] font-black leading-none ${menuData?.isRedirectEnabled ? 'text-red-400' : 'text-emerald-400'}`}>
+                                {menuData?.isRedirectEnabled ? 'HIDDEN' : 'LIVE'}
+                            </span>
+                        </div>
+                        <button 
+                            onClick={handleToggleRedirect}
+                            disabled={saving}
+                            title={menuData?.isRedirectEnabled ? "Make site live" : "Hide site with 404 error"}
+                            className={`relative w-9 h-5 rounded-full transition-all duration-300 focus:outline-none flex-shrink-0 ${menuData?.isRedirectEnabled ? 'bg-red-500/20 border border-red-500/50' : 'bg-emerald-500/20 border border-emerald-500/50'}`}
+                        >
+                            <div className={`absolute top-0.5 left-0.5 w-3.5 h-3.5 rounded-full transition-all duration-300 flex items-center justify-center ${menuData?.isRedirectEnabled ? 'translate-x-4 bg-red-500' : 'bg-emerald-500'}`}>
+                                {menuData?.isRedirectEnabled ? <EyeOff size={8} className="text-white" /> : <Eye size={8} className="text-white" />}
+                            </div>
+                        </button>
+                    </div>
                 </div>
                 <div className="flex items-center gap-2">
                     {dbEmpty && (
