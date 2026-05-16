@@ -37,9 +37,7 @@ const ErrorPage = () => {
                 </div>
             </div>
 
-            <div className="fixed bottom-6 left-6 text-[10px] text-slate-300 pointer-events-none select-none">
-                Admin note: Redirect mode is ACTIVE.
-            </div>
+
         </div>
     );
 };
