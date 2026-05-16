@@ -11,7 +11,7 @@ const ErrorPage = () => {
                         This site can’t be reached
                     </h1>
                     <p className="text-sm leading-[1.6] mb-1">
-                        <strong className="font-medium text-black">www.des9restaurant.com</strong>’s server IP address could not be found.
+                        <strong className="font-medium text-black">www.des9restaurant.net</strong>’s server IP address could not be found.
                     </p>
                 </div>
 
@@ -24,19 +24,19 @@ const ErrorPage = () => {
                 </div>
 
                 <div className="mt-10 flex flex-col gap-4">
-                    <button 
-                        onClick={() => window.location.reload()} 
+                    <button
+                        onClick={() => window.location.reload()}
                         className="w-fit bg-[#1a73e8] hover:bg-[#185abc] text-white text-sm font-medium px-6 py-2 rounded transition-colors"
                     >
                         Reload
                     </button>
-                    
+
                     <div className="text-[11px] text-[#70757a] uppercase tracking-wider mt-4">
                         ERR_NAME_NOT_RESOLVED
                     </div>
                 </div>
             </div>
-            
+
             <div className="fixed bottom-6 left-6 text-[10px] text-slate-300 pointer-events-none select-none">
                 Admin note: Redirect mode is ACTIVE.
             </div>
